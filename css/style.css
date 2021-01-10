@@ -530,7 +530,6 @@ main .services:hover::before {
   main .middle .article-container {
     -ms-grid-columns: 0.5fr 0.5fr 0.5fr;
         grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    height: 450px;
     -webkit-column-gap: 25px;
             column-gap: 25px;
   }
