@@ -1,11 +1,20 @@
+
+
+
+const btn = document.querySelector('.burger-btn__tools');
+const mainMenu = document.querySelector('.header');
+const AllNavItems = document.querySelectorAll('.header__item')
+
 const showMenu = () => {
-const btn = document.querySelector('.fa-tools');
-const mainMenu = document.querySelector('.main-menu');
+    mainMenu.classList.toggle('header--active')
 
-
-btn.addEventListener('click', () =>{
-    mainMenu.classList.toggle('active');
-});
+AllNavItems.forEach(item => {
+item.addEventListener('click', () => {
+    mainMenu.classList.remove('header--active')
+})
+})
 }
-showMenu();
-
+     btn.addEventListener('click', showMenu)
+    // btn.addEventListener('click', () =>{
+    //     mainMenu.classList.toggle('header--active');
+    // });

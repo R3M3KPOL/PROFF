@@ -13,144 +13,154 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="logo-left">
-                <div class="header-img"></div>
-                <h1>PROFF</h1>
-            </div>
-            <nav class="navigation">
-                <button class="toggle-button">
-                    <i class="fas fa-tools"></i>
-                </button>
-                <ul class="main-menu">
-                    <li><a href="">O nas</a></li>
-                    <li><a href="">Oferta</a></li>
-                    <li><a href="">Galeria</a></li>
-                    <li><a href="">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
+    <button class="burger-btn">
+        <i class="fas fa-tools burger-btn__tools"></i>
+    </button>
+    <header class="header">
+        <div class="header__logo">
+            <div class="header__img"></div>
+            <h1 class="header__title">PROFF</h1>
+        </div>
+        <nav class="header__navigation">
+            <ul class="header__main-menu">
+                <li class="header__list"><a href="#top" class="header__item header__item--border">O nas</a></li>
+                <li class="header__list"><a href="#middle" class="header__item header__item--border">Oferta</a></li>
+                <li class="header__list"><a href="#bottom" class="header__item header__item--border">Galeria</a></li>
+                <li class="header__list header__list--border"><a href="#contact" class="header__item">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section class="top">
-                <div class="top-img"></div>
-                <div class="about-us-text">
-                    <h2>O nas</h2>
-                    <p>Firma <span>jp proff</span> to młody i dynamiczny zespół oferujący usługi z zakresu prac
-                        remontowych i
-                        budowlanych. Zajmujemy się wykonywaniem projektów na terenie Oslo i okolic, a także
-                        podejmujemy się długoterminowych projektów wyjazdowych.</p>
+    <div class="wrapper">
+        <main class="main">
+            <div class="main__bgc-container">
+                <p class="main__text">Firma <span class="main__item">jp proff</span> to młody i dynamiczny zespół
+                    oferujący usługi z zakresu prac
+                    remontowych i
+                    budowlanych.</p>
+            </div>
+            <section id="top" class=top">
+                <div class="top__img"></div>
+                <div class="top__about-text">
+                    <h2 class="top__title">O nas</h2>
+                    <p class="top__text"> Zajmujemy się wykonywaniem projektów na terenie Oslo i okolic,
+                        a także
+                        podejmujemy się długoterminowych projektów wyjazdowych.Korzystając z naszej wiedzy i nabytych
+                        umiejętności, doradzamy klientom aby uzyskać jak
+                        najlepszy i profesjonalny efekt końcowy. Dzięki dobrej komunikacji z naszymi współpracownikami
+                        jesteśmy w stanie na bieżąco koordynować zakres prac wykonywanych przy projekcie. Nasza solidna
+                        wiedza oraz zaangażowanie w usługi jakie wykonujemy, to podstawa udanego projektu.</p>
                 </div>
+                <div class="top__img-second"></div>
             </section>
-            <section class="middle">
-                <div class="middle-img"></div>
-                <div class="about-us-text">
-                    <h2>Oferta</h2>
-                    <p>Kluczowymi sektorami w działalności naszej firmy są:
+            <section id="middle" class="middle">
+                <div class="middle__img"></div>
+                <div class="middle__about-text">
+                    <h2 class="middle__title">Oferta</h2>
+                    <p class="middle__text">Kluczowymi sektorami w działalności naszej firmy są:
                     </p>
                 </div>
-                <div class="article-container">
-                    <article>
-                        <i class="fas fa-hammer"></i></i>
-                        <p> Stolarka wewnętrzna i zewnętrzna:
-                        </p>
-                        <li>stawianie ścian</li>
-                        <li>Małe domki szkieletowe</li>
-                        <li>Garaży</li>
-                        <li>sufitów</li>
-                        <li>montaż drzwi i okien</li>
-                        <li>układanie parkietów</li>
+                <div class="middle__container">
+                    <article class="middle__article">
+                        <i class="fas fa-hammer middle__hammer"></i></i>
+                        <h2 class="middle__subtitle"> Stolarka wewnętrzna i zewnętrzna:
+                        </h2>
+                        <li class="middle__list">stawianie ścian</li>
+                        <li class="middle__list">Małe domki szkieletowe</li>
+                        <li class="middle__list">Garaży</li>
+                        <li class="middle__list">sufitów</li>
+                        <li class="middle__list">montaż drzwi i okien</li>
+                        <li class="middle__list">układanie parkietów</li>
                     </article>
-                    <article>
-                        <i class="fas fa-toolbox"></i>
-                        <p>Montaż mebli:
-                        </p>
-                        <li>meble kuchenne</li>
-                        <li>meble łazienkowe</li>
-                        <li>meble pokojowe</li>
+                    <article class="middle__article">
+                        <i class="fas fa-toolbox  middle__toolbox"></i>
+                        <h2 class="middle__subtitle">Montaż mebli:
+                        </h2>
+                        <li class="middle__list">meble kuchenne</li>
+                        <li class="middle__list">meble łazienkowe</li>
+                        <li class="middle__list">meble pokojowe</li>
                     </article>
-                    <article>
-                        <i class="fas fa-paint-roller"></i>
-                        <p>Prace remontowe</p>
-                        <li>Malowanie wewnętrzne</li>
-                        <li>Malowanie zewnętrzne</li>
-                        <li>Inne prace remontowe</li>
+                    <article class="middle__article">
+                        <i class="fas fa-paint-roller  middle__roller"></i>
+                        <h2 class="middle__subtitle">Prace remontowe:</h2>
+                        <li class="middle__list">Malowanie wewnętrzne</li>
+                        <li class="middle__list">Malowanie zewnętrzne</li>
+                        <li class="middle__list">Inne prace remontowe</li>
                     </article>
                 </div>
             </section>
-            <section class="bottom">
-                <div class="about-us-text">
-                    <h2>Nasze projekty</h2>
-                    <p>Przed,w trakcie, po</p>
+            <section id="bottom" class="bottom">
+                <div class="bottom__about-text">
+                    <h2 class="bottom__title">Nasze projekty</h2>
+                    <p class="bottom__text">Przed,w trakcie, po</p>
                 </div>
 
-                <div class="services_gallery">
-                    <div class="serv">
-                        <div class="services">
-                            <img src="img/photo/ogródek/ogródek przed.jpg" alt="" class="services_img">
-                            <div class="services_text">Przed</div>
+                <div class="gallery">
+                    <div class="gallery__serv">
+                        <div class="gallery__services">
+                            <img src="img/photo/ogródek/ogródek przed.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">Przed</div>
                         </div>
-                        <div class="services">
-                            <img src="img/photo/ogródek/ogródek po.jpg" alt="" class="services_img">
-                            <div class="services_text">po</div>
-                        </div>
-                    </div>
-                    <div class="serv">
-                        <div class="services">
-                            <img src="img/photo/patio/patio przed.jpg" alt="" class="services_img">
-                            <div class="services_text">Przed</div>
-                        </div>
-                        <div class="services">
-                            <img src="img/photo/patio/patio po.jpg" alt="" class="services_img">
-                            <div class="services_text">po</div>
+                        <div class="gallery__services">
+                            <img src="img/photo/ogródek/ogródek po.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">po</div>
                         </div>
                     </div>
-                    <div class="serv">
-                        <div class="services">
-                            <img src="img/photo/pomieszczenie/pomieszczenie przed.jpg" alt="" class="services_img">
-                            <div class="services_text">przed</div>
+                    <div class="gallery__serv">
+                        <div class="gallery__services">
+                            <img src="img/photo/patio/patio przed.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">Przed</div>
                         </div>
-                        <div class="services">
+                        <div class="gallery__services">
+                            <img src="img/photo/patio/patio po.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">po</div>
+                        </div>
+                    </div>
+                    <div class="gallery__serv">
+                        <div class="gallery__services">
+                            <img src="img/photo/pomieszczenie/pomieszczenie przed.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">przed</div>
+                        </div>
+                        <div class="gallery__services">
                             <img src="img/photo/pomieszczenie/pomieszczenie w trakcie.jpg" alt=""
-                                class="services_img third">
-                            <div class="services_text"></div>
+                                class="gallery__img gallery__img--third">
+                            <div class="gallery__text"></div>
                         </div>
-                        <div class="services">
-                            <img src="img/photo/pomieszczenie/pomieszczenie po.jpg" alt="" class="services_img">
-                            <div class="services_text">po</div>
-                        </div>
-                    </div>
-                    <div class="serv">
-                        <div class="services">
-                            <img src="img/photo/tarasik/tarasik przed.jpg" alt="" class="services_img">
-                            <div class="services_text">przed</div>
-                        </div>
-                        <div class="services">
-                            <img src="img/photo/tarasik/tarasik po.jpg" alt="" class="services_img">
-                            <div class="services_text">po</div>
+                        <div class="gallery__services">
+                            <img src="img/photo/pomieszczenie/pomieszczenie po.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">po</div>
                         </div>
                     </div>
-                    <div class="serv">
-                        <div class="services">
-                            <img src="img/photo/patio2/patio przed.jpg" alt="" class="services_img">
-                            <div class="services_text">przed</div>
+                    <div class="gallery__serv">
+                        <div class="gallery__services">
+                            <img src="img/photo/tarasik/tarasik przed.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">przed</div>
                         </div>
-                        <div class="services">
-                            <img src="img/photo/patio2/patio po przód.jpg" alt="" class="services_img">
-                            <div class="services_text">po </div>
+                        <div class="gallery__services">
+                            <img src="img/photo/tarasik/tarasik po.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">po</div>
                         </div>
-                        <div class="services">
-                            <img src="img/photo/patio2/patio po bok.jpg" alt="" class="services_img third">
-                            <div class="services_text">po</div>
+                    </div>
+                    <div class="gallery__serv">
+                        <div class="gallery__services">
+                            <img src="img/photo/patio2/patio przed.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">przed</div>
+                        </div>
+                        <div class="gallery__services">
+                            <img src="img/photo/patio2/patio po przód.jpg" alt="" class="gallery__img">
+                            <div class="gallery__text">po </div>
+                        </div>
+                        <div class="gallery__services">
+                            <img src="img/photo/patio2/patio po bok.jpg" alt=""
+                                class="gallery__img gallery__img--third">
+                            <div class="gallery__text">po</div>
                         </div>
                     </div>
                 </div>
+            </section>
+        </main>
     </div>
-    </section>
-    </main>
     <footer></footer>
-    </div>
     <script src="js/main.js"></script>
 
 </body>
