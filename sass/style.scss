@@ -108,104 +108,105 @@ $FontFamilyTitle: 'cinzel',
     &--active {
         transform: translateX(0);
     }
+
+    &__logo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+        max-width: 290px;
+        margin: auto;
+
+    }
+
+    &__img {
+        height: 50px;
+        width: 50px;
+        background-image: url(../img/backgroundmini.svg);
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-family: $FontFamilyTitle;
+        margin-right: 50px;
+        color: #004759;
+        text-shadow: 2px 3px 4px white;
+        letter-spacing: 2px;
+
+    }
+
+    &__navigation {
+        flex-grow: 2;
+        width: 45%;
+        margin-right: 5%;
+    }
+
+
+    &__main-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        // min-height: 60px;
+        margin-top: 15px;
+
+    }
+
+    &__list {
+        position: relative;
+        margin: 30px;
+
+        &--border {
+            padding: 4px 10px;
+            border: 1px solid tomato;
+            border-radius: 50px;
+            transition: background-color .3s;
+        }
+
+        &--border:hover {
+            background-color: tomato;
+        }
+    }
+
+    &__item {
+        font-family: $FontFamilyWord;
+        font-size: $FontSizeWord;
+        padding: 0 2px;
+        text-transform: uppercase;
+        color: white;
+
+        &--border::before,
+        &--border::after {
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            width: 0;
+            border-bottom: 1px solid white;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &--border::before {
+            right: 50%;
+        }
+
+        &--border::after {
+            left: 50%;
+        }
+
+        &--border:hover::before,
+        &--border:hover::after {
+            width: 50%;
+            cursor: pointer;
+        }
+    }
 }
 
-
-&__logo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-grow: 1;
-    max-width: 290px;
-    margin: auto;
-
-}
-
-&__img {
-    height: 50px;
-    width: 50px;
-    background-image: url(../img/backgroundmini.svg);
-    background-repeat: no-repeat;
-}
-
-&__title {
-    font-size: 3rem;
-    font-family: $FontFamilyTitle;
-    margin-right: 50px;
-    color: #004759;
-    text-shadow: 2px 3px 4px white;
-    letter-spacing: 2px;
-
-}
-
-&__navigation {
-    flex-grow: 2;
-    width: 45%;
-    margin-right: 5%;
-}
-
-
-&__main-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    // min-height: 60px;
-    margin-top: 15px;
-
-}
 
 .active {
     display: flex;
 }
 
-&__list {
-    position: relative;
-    margin: 30px;
-
-    &--border {
-        padding: 4px 10px;
-        border: 1px solid tomato;
-        border-radius: 50px;
-        transition: background-color .3s;
-    }
-
-    &--border:hover {
-        background-color: tomato;
-    }
-}
-
-&__item {
-    font-family: $FontFamilyWord;
-    font-size: $FontSizeWord;
-    padding: 0 2px;
-    text-transform: uppercase;
-    color: white;
-
-    &--border::before,
-    &--border::after {
-        content: "";
-        position: absolute;
-        bottom: -0.5rem;
-        width: 0;
-        border-bottom: 1px solid white;
-        transition: all 0.2s ease-in-out;
-    }
-
-    &--border::before {
-        right: 50%;
-    }
-
-    &--border::after {
-        left: 50%;
-    }
-
-    &--border:hover::before,
-    &--border:hover::after {
-        width: 50%;
-        cursor: pointer;
-    }
-}
 
 
 
@@ -398,7 +399,7 @@ $FontFamilyTitle: 'cinzel',
             text-transform: uppercase;
             color: white;
             font-family: sans-serif;
-            font-size: 1.2rem;
+            font-size: $FontSizeWord;
             transition: opacity .035s;
             text-shadow: 2px 2px 2px black;
         }
