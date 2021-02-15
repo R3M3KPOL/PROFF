@@ -87,7 +87,7 @@ $FontFamilyTitle: "Krub",
     background: transparent;
     border: none;
     top: calc(0% + 25px);
-    left: 84%;
+    left: 80%;
     z-index: 1000;
 
     // &:focus {
@@ -100,7 +100,7 @@ $FontFamilyTitle: "Krub",
         text-align: center;
         color: black;
         border-radius: 15px 0px 15px;
-        padding: 6px;
+        padding: 0.5rem;
         transition: background-color .3s, color .3s;
 
         &:hover {
