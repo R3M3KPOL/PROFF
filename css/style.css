@@ -274,8 +274,9 @@
 }
 
 .top__img {
+  height: 400px;
+  width: 250px;
   margin: auto;
-  width: 50%;
 }
 
 .top__title {
@@ -664,10 +665,6 @@
 }
 
 @media (min-width: 465px) {
-  .top__img {
-    height: 400px;
-    width: 250px;
-  }
   .main .bottom {
     width: 85%;
   }

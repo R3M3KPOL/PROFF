@@ -309,8 +309,9 @@ $FontFamilyTitle: "Krub",
     }
 
     &__img {
+        height: 400px;
+        width: 250px;
         margin: auto;
-        width: 50%;
     }
 
     &__title {
@@ -587,11 +588,7 @@ $FontFamilyTitle: "Krub",
 // }
 
 @media(min-width:465px) {
-    .top__img {
-        height: 400px;
-        width: 250px;
-    }
-
+  
     .main {
         .bottom {
             width: 85%;
