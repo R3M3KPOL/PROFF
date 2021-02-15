@@ -270,7 +270,7 @@ $FontFamilyTitle: "Krub",
         @include roboto;
         margin: 0;
         width: 100%;
-        font-size: $FontSizeWord;
+        font-size: $FontSizeWord +0.3rem;
         color: black;
     }
 
