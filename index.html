@@ -7,7 +7,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/25a3d60238.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krub:wght@300;400&family=Roboto:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>PROFF</title>
 </head>
@@ -19,7 +22,7 @@
     <header class="header">
         <div class="header__logo">
             <div class="header__img"></div>
-            <h1 class="header__title">PROFF</h1>
+            <span class="header__title">PROFF</span>
         </div>
         <nav class="header__navigation">
             <ul class="header__main-menu">
@@ -34,27 +37,35 @@
     <div class="wrapper">
         <main class="main">
             <div class="main__bgc-container">
-                <p class="main__text">Firma <span class="main__item">jp proff</span> to młody i dynamiczny zespół
-                    oferujący usługi z zakresu prac
-                    remontowych i
-                    budowlanych.</p>
+                <div class="main__text-container">
+                    <h1 class="main__text">jp proff</h1>
+                    <p class="main__sub-text"> to młody i dynamiczny zespół
+                        oferujący usługi z zakresu prac
+                        remontowych i
+                        budowlanych.</p>
+                </div>
             </div>
             <section id="top" class=top">
-                <div class="top__img"></div>
+                <div class="top__first-img"></div>
                 <div class="top__about-text">
                     <h2 class="top__title">O nas</h2>
-                    <p class="top__text"> Zajmujemy się wykonywaniem projektów na terenie Oslo i okolic,
-                        a także
-                        podejmujemy się długoterminowych projektów wyjazdowych.Korzystając z naszej wiedzy i nabytych
-                        umiejętności, doradzamy klientom aby uzyskać jak
-                        najlepszy i profesjonalny efekt końcowy. Dzięki dobrej komunikacji z naszymi współpracownikami
-                        jesteśmy w stanie na bieżąco koordynować zakres prac wykonywanych przy projekcie. Nasza solidna
-                        wiedza oraz zaangażowanie w usługi jakie wykonujemy, to podstawa udanego projektu.</p>
+                    <div class="top__box-img"><img src="../img/photo/inne/IMG_20190608_205825 MINI.jpg" alt=""
+                            class="top__img">
+                        <p class="top__text"> Zajmujemy się wykonywaniem projektów na terenie Oslo i okolic,
+                            a także
+                            podejmujemy się długoterminowych projektów wyjazdowych.Korzystając z naszej wiedzy i
+                            nabytych
+                            umiejętności, doradzamy klientom aby uzyskać jak
+                            najlepszy i profesjonalny efekt końcowy. Dzięki dobrej komunikacji z naszymi
+                            współpracownikami
+                            jesteśmy w stanie na bieżąco koordynować zakres prac wykonywanych przy projekcie. Nasza
+                            solidna
+                            wiedza oraz zaangażowanie w usługi jakie wykonujemy, to podstawa udanego projektu.</p>
+                    </div>
                 </div>
-                <div class="top__img-second"></div>
+                <div class="top__second-img"></div>
             </section>
             <section id="middle" class="middle">
-                <div class="middle__img"></div>
                 <div class="middle__about-text">
                     <h2 class="middle__title">Oferta</h2>
                     <p class="middle__text">Kluczowymi sektorami w działalności naszej firmy są:
@@ -62,7 +73,7 @@
                 </div>
                 <div class="middle__container">
                     <article class="middle__article">
-                        <i class="fas fa-hammer middle__hammer"></i></i>
+                        <i class="fas fa-hammer middle__hammer"></i>
                         <h2 class="middle__subtitle"> Stolarka wewnętrzna i zewnętrzna:
                         </h2>
                         <li class="middle__list">stawianie ścian</li>
@@ -88,6 +99,108 @@
                         <li class="middle__list">Inne prace remontowe</li>
                     </article>
                 </div>
+            </section>
+
+            <div class="bgc-overlay">
+                <section class="steps">
+                    <div class="steps__item steps__item--first">
+                        <div class="steps__container">
+                            <div class="steps__subcontainer">
+                                <i class="steps__icon fas fa-phone-alt"></i>
+                                <span class="steps__text-icon">Krok pierwszy</span>
+                            </div>
+                        </div>
+                        <div class="details">
+
+                            <h3 class="details__title">Kontakt z Nami</h3>
+                            <p class="details__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis
+                                repellat minima,
+                                repudiandae beatae asperiores earum maiores nisi praesentium vel! Ea, debitis
+                                deserunt
+                                repudiandae itaque a ducimus excepturi quis necessitatibus rem? </p>
+
+                        </div>
+                    </div>
+                    <div class="steps__item steps__item--second">
+                        <div class="steps__container">
+                            <div class="steps__subcontainer">
+                                <i class="steps__icon fas fa-drafting-compass"></i>
+                                <span class="steps__text-icon">
+                                    Krok drugi
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <h3 class="details__title">Ustalenie szczegółów prac</h3>
+                            <p class="details__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis repellat minima,
+                                repudiandae beatae asperiores earum maiores nisi praesentium vel! Ea, debitis
+                                deserunt
+                                repudiandae itaque a ducimus excepturi quis necessitatibus rem? </p>
+                        </div>
+                    </div>
+                    <div class="steps__item steps__item--third">
+                        <div class="steps__container">
+                            <div class="steps__subcontainer">
+                                <i class="steps__icon fas fa-hand-holding-usd"></i>
+                                <span class="steps__text-icon">
+                                    Krok trzeci
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details">
+                            
+                                <h3 class="details__title">Ustalenie ceny</h3>
+                                <p class="details__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Reiciendis repellat minima,
+                                    repudiandae beatae asperiores earum maiores nisi praesentium vel! Ea,
+                                    debitis deserunt
+                                    repudiandae itaque a ducimus excepturi quis necessitatibus rem? </p>
+                        
+                        </div>
+                    </div>
+                    <div class="steps__item steps__item--fourth">
+                        <div class="steps__container">
+                            <div class="steps__subcontainer">
+                                <i class="steps__icon fas fa-tools"></i>
+                                <span class="steps__text-icon">
+                                    Krok czwarty
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details">
+                                <h3 class="details__title">Wykonanie pracy</h3>
+                                <p class="details__text">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Reiciendis repellat minima,
+                                    repudiandae beatae asperiores earum maiores nisi praesentium
+                                    vel! Ea, debitis deserunt
+                                    repudiandae itaque a ducimus excepturi quis necessitatibus rem?
+                                </p>
+                            
+                        </div>
+                    </div>
+                    <div class="steps__item steps__item--fifth">
+                        <div class="steps__container">
+                            <div class="steps__subcontainer">
+                                <i class="steps__icon far fa-smile-wink"></i>
+                                <span class="steps__text-icon">
+                                    Krok piąty
+                                </span>
+                            </div>
+                        </div>
+                        <div class="details">
+                                <h3 class="details__title">Uśmiech zadowolonego klienta</h3>
+                                <p class="details__text">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Reiciendis repellat minima,
+                                    repudiandae beatae asperiores earum maiores nisi praesentium
+                                    vel! Ea, debitis deserunt
+                                    repudiandae itaque a ducimus excepturi quis necessitatibus rem?
+                                </p>
+                            
+                        </div>
+                    </div>
+            </div>
             </section>
             <section id="bottom" class="bottom">
                 <div class="bottom__about-text">
@@ -158,6 +271,7 @@
                     </div>
                 </div>
             </section>
+
         </main>
     </div>
     <footer></footer>

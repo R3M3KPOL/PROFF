@@ -36,10 +36,10 @@ $FontSizeSubTitle: 1.5rem;
 $FontSizeWord: 1rem;
 $FontSizeIcon: 2.3rem;
 $WordColor : rgba(0, 0, 0, 0.616);
-$FontFamilyWord: 'Roboto',
-'sans-serif';
-$FontFamilyTitle: 'cinzel',
-'sans-serif';
+$FontFamilyWord: "Roboto",
+"sans-serif";
+$FontFamilyTitle: "Krub",
+"sans-serif";
 
 @mixin roboto {
     font-family: $FontFamilyWord;
@@ -60,6 +60,27 @@ $FontFamilyTitle: 'cinzel',
     text-transform: uppercase;
 }
 
+@mixin MainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 100px;
+    height: 50vh;
+}
+
+@mixin FontsIcon {
+    font-size: $FontSizeIcon;
+    margin: 20px;
+    padding: 10px;
+    background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
+    background-repeat: no-repeat;
+    color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
+    border: 2px solid rgba(44, 44, 44, 0.637);
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 .burger-btn {
     position: fixed;
@@ -69,9 +90,9 @@ $FontFamilyTitle: 'cinzel',
     left: 84%;
     z-index: 1000;
 
-    &:focus {
-        outline: none;
-    }
+    // &:focus {
+    //     outline: none;
+    // }
 
     &__tools {
         display: block;
@@ -170,7 +191,7 @@ $FontFamilyTitle: 'cinzel',
     }
 
     &__item {
-        font-family: $FontFamilyWord;
+        font-family: $FontFamilyTitle;
         font-size: $FontSizeWord;
         padding: 0 2px;
         text-transform: uppercase;
@@ -226,244 +247,352 @@ $FontFamilyTitle: 'cinzel',
     margin: auto;
 
     &__bgc-container {
-        display: flex;
-        align-items: center;
         min-height: 100vh;
         background: url("../img/jdproff_logo.png") center no-repeat, linear-gradient(rgb(247, 245, 245) 25%, rgb(0, 149, 129) 85%, rgb(0, 71, 89));
         background-size: 30vmax;
         background-attachment: fixed;
     }
 
+    &__text-container {
+        @include MainText;
+    }
+
+    &__text {
+        font-family: $FontFamilyTitle;
+        text-align: start;
+        text-transform: uppercase;
+        padding: 0 20px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, .0) 90%);
+        color: #009581;
+    }
+
+    &__sub-text {
+        @include roboto;
+        margin: 0;
+        width: 100%;
+        font-size: $FontSizeWord;
+        color: black;
+    }
+
+}
+
+.top {
+
+    &__first-img {
+        background-image: url(../img/tools-864983_1920.jpg);
+    }
+
+    &__second-img {
+        background-image: url(../img/kitchen-2165756_1920.jpg);
+    }
+
+    &__first-img,
+    &__second-img {
+        height: 30vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        box-shadow: 1px 1px 10px #333;
+    }
+
+    &__about-text {
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &__box-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__img {
+        margin: auto;
+        width: 50%;
+    }
+
+    &__title {
+        @include cinzel;
+    }
+
+    &__text {padding: 1.5em;
+        @include roboto;
+    }
+
+}
+
+.middle {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    &__about-text {
+        margin: 6em 0 4em 0;
+    }
+
+    &__title {
+        @include cinzel;
+    }
 
     &__text {
         @include roboto;
     }
 
-    &__item {
-        font-size: 2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #009581;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
-
-    .top {
-        &__img {
-            background-image: url(../img/tools-864983_1920.jpg);
-        }
-
-        &__img-second {
-            background-image: url(../img/kitchen-2165756_1920.jpg);
-        }
-
-        &__img,
-        &__img-second {
-            height: 30vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            box-shadow: 1px 1px 10px #333;
-        }
-
-        // .middle-img {
-        //     margin: 50px 0px;
-        //     background-image: url(../img/pexels-anete-lusina-4792483.jpg);
-        // }
-        &__about-text {
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-
-        &__title {
-            @include cinzel;
-        }
-
-        &__text {
-            @include roboto;
-        }
-
+    &__article {
+        font-family: $FontFamilyTitle;
+        text-align: center;
     }
 
-    .middle {
-        margin: auto;
-        max-width: 1200px;
-
-        &__title {
-            @include cinzel;
-        }
-
-        &__text {
-            @include roboto;
-        }
-
-        &__container {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
-        &__article {
-            font-family: $FontFamilyTitle;
-            background-color: rgba(255, 255, 255, 0.4);
-            text-align: center;
-        }
-
-        &__subtitle {
-            font-size: $FontSizeSubTitle;
-            color: rgba(0, 0, 0, 0.822);
-            margin-bottom: 10px;
-        }
-
-        &__list {
-            color: rgba(0, 0, 0, 1);
-            font-size: $FontSizeWord;
-            padding: 5px;
-        }
-
-
-        &__hammer,
-        &__toolbox,
-        &__roller {
-            font-size: $FontSizeIcon;
-            margin: 20px;
-            padding: 10px;
-            background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
-            background-repeat: no-repeat;
-            color: white;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
-            border: 2px solid rgba(44, 44, 44, 0.637);
-            border-radius: 50%;
-        }
-
-        &__roller {
-            transform: rotate(-25deg);
-        }
+    &__subtitle {
+        font-size: $FontSizeSubTitle;
+        color: rgba(0, 0, 0, 0.822);
+        margin-bottom: 10px;
     }
 
-    .bottom {
-        margin: auto;
-        max-width: 1200px;
-        min-height: 100vh;
-        padding-bottom: 8rem;
-
-        &__title {
-            @include cinzel;
-        }
-
-        &__text {
-            @include roboto;
-        }
-
-    }
-
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 1200px;
-        height: auto;
-        margin: 0 auto;
+    &__list {
+        color: rgba(0, 0, 0, 1);
+        font-size: $FontSizeWord;
         padding: 20px;
-        overflow: hidden;
+    }
 
 
-        &__serv {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;
-            margin: 10px 10px;
-        }
+    &__hammer,
+    &__toolbox,
+    &__roller {
+        @include FontsIcon;
+        transition: transform .3s ease-in-out;
+    }
 
-        &__services {
-            flex: 0 0 150px;
-            height: calc(100px * 1.4);
-            max-width: calc(250px / 2);
-            margin: 2px;
-            position: relative;
-            text-align: center;
-            z-index: 2;
-            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.8);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            cursor: pointer;
-        }
+    &__roller {
+        transform: rotate(-25deg);
+    }
 
-        &__text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            width: 60%;
-            margin: 0 auto;
-            text-transform: uppercase;
-            color: white;
-            font-family: sans-serif;
-            font-size: $FontSizeWord;
-            transition: opacity .035s;
-            text-shadow: 2px 2px 2px black;
-        }
-
-        &::after,
-        &::before,
-
-        &__img {
-            position: absolute;
-            top: 0%;
-            width: 100%;
-            height: 100%;
-            display: block;
-            z-index: -5;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            object-position: center;
-        }
-
-        &__services:hover {
-            opacity: 1;
-            transition: all 0.3s ease-in-out;
-            transform: scale(1.2);
-            z-index: 10;
-            overflow: hidden;
-        }
-
-        &__services::before,
-        &__services::after {
-            content: '';
-            position: absolute;
-            opacity: 0.4;
-            width: 350px;
-            height: 40px;
-            background-color: white;
-            top: -100px;
-            left: 0;
-            z-index: 2;
-            transform: rotate(45deg);
-            transition: transform 1.3s;
-        }
-
-        &__services:hover::before {
-            transform: translate(-100px, 600px) rotate(45deg);
-            transition: transform 0.5s;
-        }
+    .fas:hover {
+        background-image: radial-gradient(rgba(9, 230, 200, 0.5), rgba(9, 230, 200, 0.75), rgb(9, 230, 200));
+        transform: scale(1.1);
+        border: 2px solid rgb(0, 71, 89);
+        box-shadow: 1px 1px 10px rgba(0, 149, 129, 0.61);
     }
 }
+
+.bottom {
+    margin: auto;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding-bottom: 8rem;
+
+    &__title {
+        @include cinzel;
+    }
+
+    &__text {
+        @include roboto;
+    }
+
+}
+
+.bgc-overlay {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../img/photo/inne/pexels-cal-david-735319.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 10px black;
+
+    &__title {
+        position: absolute;
+        @include cinzel;
+        font-size: $FontSizeTitle - 0.4rem;
+    }
+
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    &__container {
+        text-align: center;
+    }
+
+
+
+    &__icon {
+        @include FontsIcon;
+        font-size: $FontSizeIcon - 1rem;
+        margin: 10px;
+        padding: 0.4em;
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+
+    &__text-icon {
+        display: block;
+        width: auto;
+        margin: 0.5em 0;
+        padding: 0.25em 0;
+        font-family: $FontFamilyTitle;
+        font-size: $FontSizeTitle - 0.9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: rgb(9, 230, 200);
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1.5px solid rgb(9, 230, 200);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: #09e6c863;
+
+
+    &__title {
+        @include cinzel;
+        font-size: $FontSizeTitle - 1rem;
+        color: rgb(0, 0, 0);
+    }
+
+    &__text {
+        @include roboto;
+        font-size: $FontSizeWord - 0.2rem;
+        color: whitesmoke;
+    }
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+
+
+    &__serv {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 10px 10px;
+    }
+
+    &__services {
+        flex: 0 0 150px;
+        height: calc(100px * 1.4);
+        max-width: calc(250px / 2);
+        margin: 2px;
+        position: relative;
+        text-align: center;
+        z-index: 2;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.8);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        cursor: pointer;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 60%;
+        margin: 0 auto;
+        text-transform: uppercase;
+        color: white;
+        font-family: sans-serif;
+        font-size: $FontSizeWord;
+        transition: opacity .035s;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    &::after,
+    &::before,
+
+    &__img {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -5;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        object-position: center;
+    }
+
+    &__services:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.2);
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    &__services::before,
+    &__services::after {
+        content: '';
+        position: absolute;
+        opacity: 0.4;
+        width: 350px;
+        height: 40px;
+        background-color: white;
+        top: -100px;
+        left: 0;
+        z-index: 2;
+        transform: rotate(45deg);
+        transition: transform 1.3s;
+    }
+
+    &__services:hover::before {
+        transform: translate(-100px, 600px) rotate(45deg);
+        transition: transform 0.5s;
+    }
+}
+
 
 
 // MEDIAAAAA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-@media (orientation: landscape) {
+// @media (orientation: landscape) {
 
-    .top-img,
-    .middle-img {
-        height: 40vh;
-    }
-}
+//     .top-img,
+//     .middle-img {
+//         height: 40vh;
+//     }
+// }
 
 @media(min-width:465px) {
+    .top__img {
+        height: 400px;
+        width: 250px;
+    }
 
-
-    main {
-
-        .middle,
+    .main {
         .bottom {
             width: 85%;
         }
@@ -474,50 +603,72 @@ $FontFamilyTitle: 'cinzel',
     }
 }
 
+@media (min-width:520px) {
+    .main {
 
-@media (min-width:532px) {
-    .gallery {
-        &__services:nth-child(3) {
-            top: 0px;
+        &__text {
+            padding: 10px 20px;
+            font-size: $FontSizeTitle + 1rem;
         }
+
+        &__sub-text {
+            font-size: $FontSizeWord + 0.5rem;
+        }
+
     }
+
 }
 
-@media (min-width:691px) {
+@media (min-width:690px) {
     .main {
-        .middle {
-            &__container {
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 10px;
-            }
-
-            &__article {
-                box-shadow: 2px 4px 5px #004759;
-                border: 1px solid black;
-                border-radius: 5px;
-            }
-
-
-            &__subtitle {
-                font-size: $FontSizeSubTitle;
-                color: rgba(0, 0, 0, 0.822);
-                margin-bottom: 15px;
-            }
-
-            &__list {
-                color: rgba(0, 0, 0, 1);
-                padding: 15px;
-            }
-
+        &__text-container {
+            top: 200px;
         }
 
-        .gallery__services {
-            flex: 0 0 170px;
-            height: calc(125px * 1.5);
-            max-width: 100%;
+        &__text {
+            max-width: 40%;
+            padding: 10px 20px;
+            font-size: $FontSizeTitle + 1rem;
+        }
 
+        &__sub-text {
+            font-size: $FontSizeWord + 0.5rem;
         }
     }
+
+    .middle {
+        &__container {
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 10px;
+        }
+
+        // &__article {
+        //     box-shadow: 2px 4px 5px #004759;
+        //     border: 1px solid black;
+        //     border-radius: 5px;
+        // }
+
+
+        &__subtitle {
+            font-size: $FontSizeSubTitle;
+            color: rgba(0, 0, 0, 0.822);
+            margin-bottom: 15px;
+        }
+
+        &__list {
+            color: rgba(0, 0, 0, 1);
+            padding: 15px;
+        }
+
+    }
+
+    .gallery__services {
+        flex: 0 0 170px;
+        height: calc(125px * 1.5);
+        max-width: 100%;
+
+    }
+
 }
 
 
@@ -552,60 +703,124 @@ $FontFamilyTitle: 'cinzel',
 
     .header__logo {
         margin: 10px auto 0 50px;
+
+    }
+
+    .top__box-img {
+        flex-direction: row;
+        padding: 8em 0;
+    }
+
+    .top__img {
+        margin: auto 40px auto 20px;
+    }
+
+    .steps {
+        max-width: 500px;
     }
 }
 
+
+
+
 @media (min-width:1024px) {
 
-    .main {
-        .top__title {
+
+    .top {
+        &__title {
             font-size: $FontSizeTitle + 0.1rem;
         }
 
-        .top__text {
-            font-size: $FontSizeWord + 0.2rem;
+        &__img {
+            margin: auto 50px auto 100px;
         }
 
-        .middle {
-            &__container {
-                grid-template-columns: 0.5fr 0.5fr 0.5fr;
-                gap: 25px 25px;
-            }
+        &__text {
+            font-size: $FontSizeWord + .2rem;
+            margin: auto auto auto 50px;
+        }
+    }
 
-            &__subtitle {
-                font-size: $FontSizeSubTitle;
-                color: rgba(0, 0, 0, 0.822);
-                margin-bottom: 15px;
-            }
-
-            &__list {
-                color: rgba(0, 0, 0, 1);
-                padding: 20px;
-                font-size: $FontSizeWord + 0.1rem;
-            }
+    .middle {
+        &__container {
+            gap: 20%;
         }
 
-        .gallery {
-            padding: 30px;
+        &__subtitle {
+            font-size: $FontSizeSubTitle;
+            color: rgba(0, 0, 0, 0.822);
+            margin-bottom: 15px;
+        }
 
-            &__services {
-                flex: 0 1 300px;
-                height: calc(125px * 2);
-                max-width: calc(600px / 2.5);
+        &__list {
+            color: rgba(0, 0, 0, 1);
+            padding: 20px;
+            font-size: $FontSizeWord + 0.1rem;
+        }
+    }
+
+    .steps {
+        max-width: 1200px;
+        flex-direction: row;
+    }
+
+    .gallery {
+        padding: 30px;
+
+        &__services {
+            flex: 0 1 300px;
+            height: calc(125px * 2);
+            max-width: calc(600px / 2.5);
+        }
+
+        &__serv {
+
+            &:nth-of-type(3),
+            &:nth-of-type(5) {
+                justify-content: flex-start;
             }
 
-            &__serv {
-
-                &:nth-of-type(3),
-                &:nth-of-type(5) {
-                    justify-content: flex-start;
-                }
-
-                &:nth-of-type(2),
-                &:nth-of-type(4) {
-                    justify-content: flex-end;
-                }
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
+                justify-content: flex-end;
             }
+        }
+    }
+
+}
+
+@media (min-width:1200px) {
+    .bgc-overlay {
+
+        &__title {
+            font-size: $FontSizeTitle - 0.4rem;
+        }
+
+    }
+
+    .steps {
+        &__item {
+            padding: 1em;
+        }
+
+        &__icon {
+            font-size: $FontSizeIcon - 0.7rem;
+            padding: 0.4em;
+            margin: 20px;
+        }
+
+
+        &__text-icon {
+            width: 208px;
+            font-size: $FontSizeTitle - 0.8rem;
+        }
+    }
+
+    .details {
+        padding: 1.5em;
+
+        &__text {
+            font-size: $FontSizeWord - 0.1rem;
         }
     }
 }
