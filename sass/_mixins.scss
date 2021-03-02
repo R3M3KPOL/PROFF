@@ -1,0 +1,54 @@
+@mixin roboto {
+    font-family: $FontFamilyWord;
+    font-size: $FontSizeWord;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+    color: $WordColor;
+}
+
+@mixin cinzel {
+    font-family: $FontFamilyTitle;
+    font-size: $FontSizeTitle;
+    padding: 2em;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin MainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin FontsIcon {
+    font-size: $FontSizeIcon;
+    padding: 0.3em;
+    background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
+    background-repeat: no-repeat;
+    color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
+    border: 2px solid rgba(44, 44, 44, 0.637);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@mixin HeroImg ($bgcImg) {
+    background-image: url($bgcImg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    box-shadow: 1px 1px 10px #333;
+}
+
+@mixin ContactForm {
+    margin-bottom: 2em;
+    padding: 0.5em 1em;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}

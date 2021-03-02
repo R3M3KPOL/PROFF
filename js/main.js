@@ -1,11 +1,25 @@
+
+
+
+const btn = document.querySelector('.burger-btn__tools');
+const mainMenu = document.getElementsByName('.header');
+const AllNavItems = document.querySelector('.header__item');
+
+const stepsBtn = document.querySelector('.steps__icon');
+const stepsItem = document.querySelector('.steps__text-icon');
+
 const showMenu = () => {
-const btn = document.querySelector('.fa-tools');
-const mainMenu = document.querySelector('.main-menu');
+    mainMenu.classList.toggle('header--active')
 
-
-btn.addEventListener('click', () =>{
-    mainMenu.classList.toggle('active');
-});
+AllNavItems.forEach(item => {
+item.addEventListener('click', () => {
+    mainMenu.classList.remove('header--active')
+})
+})
 }
-showMenu();
-
+     btn.addEventListener('click', showMenu)
+  
+const showSteps = () => {
+    stepsItem.classList.toggle('steps__text-icon--active')
+}
+stepsBtn.addEventListener('click', showSteps)
