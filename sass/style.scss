@@ -31,56 +31,9 @@
     // font-size: 62.5%;
 }
 
-$FontSizeTitle: 2rem;
-$FontSizeSubTitle: 1.5rem;
-$FontSizeWord: 1rem;
-$FontSizeIcon: 2.3rem;
-$WordColor : rgba(0, 0, 0, 0.616);
-$FontFamilyWord: "Roboto",
-"sans-serif";
-$FontFamilyTitle: "Krub",
-"sans-serif";
-
-@mixin roboto {
-    font-family: $FontFamilyWord;
-    font-size: $FontSizeWord;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    line-height: 1.5;
-    color: $WordColor;
-}
-
-@mixin cinzel {
-    font-family: $FontFamilyTitle;
-    font-size: $FontSizeTitle;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-@mixin MainText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: relative;
-    top: 100px;
-    height: 50vh;
-}
-
-@mixin FontsIcon {
-    font-size: $FontSizeIcon;
-    margin: 20px;
-    padding: 10px;
-    background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
-    background-repeat: no-repeat;
-    color: white;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
-    border: 2px solid rgba(44, 44, 44, 0.637);
-    border-radius: 50%;
-    cursor: pointer;
-}
+@import "./fontsAndColors";
+@import "./mixins";
+@import "./components";
 
 .burger-btn {
     position: fixed;
@@ -96,7 +49,7 @@ $FontFamilyTitle: "Krub",
 
     &__tools {
         display: block;
-        font-size: $FontSizeIcon - 0.3rem;
+        font-size: $FontSizeIcon;
         text-align: center;
         color: black;
         border-radius: 15px 0px 15px;
@@ -132,7 +85,6 @@ $FontFamilyTitle: "Krub",
 
     &__logo {
         display: flex;
-        justify-content: space-around;
         align-items: center;
         flex-grow: 1;
         max-width: 290px;
@@ -148,9 +100,9 @@ $FontFamilyTitle: "Krub",
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 2.5em;
         font-family: $FontFamilyTitle;
-        margin-right: 50px;
+        margin: 0 2em 0.2em 0;
         color: #004759;
         text-shadow: 2px 3px 4px white;
         letter-spacing: 2px;
@@ -160,7 +112,7 @@ $FontFamilyTitle: "Krub",
     &__navigation {
         flex-grow: 2;
         width: 45%;
-        margin-right: 5%;
+        margin-right: 5vw;
     }
 
 
@@ -169,14 +121,13 @@ $FontFamilyTitle: "Krub",
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        // min-height: 60px;
-        margin-top: 15px;
+        margin-top: 0.75rem;
 
     }
 
     &__list {
         position: relative;
-        margin: 30px;
+        margin: 1.9rem;
 
         &--border {
             padding: 4px 10px;
@@ -242,12 +193,9 @@ $FontFamilyTitle: "Krub",
 }
 
 .main {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     margin: auto;
 
     &__bgc-container {
-        min-height: 100vh;
         background: url("../img/jdproff_logo.png") center no-repeat, linear-gradient(rgb(247, 245, 245) 25%, rgb(0, 149, 129) 85%, rgb(0, 71, 89));
         background-size: 30vmax;
         background-attachment: fixed;
@@ -255,13 +203,14 @@ $FontFamilyTitle: "Krub",
 
     &__text-container {
         @include MainText;
+        height: 100vh;
     }
 
     &__text {
         font-family: $FontFamilyTitle;
         text-align: start;
         text-transform: uppercase;
-        padding: 0 20px;
+        padding: 0.3em;
         background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, .0) 90%);
         color: #009581;
     }
@@ -276,28 +225,25 @@ $FontFamilyTitle: "Krub",
 
 }
 
+.title-heading {
+    @include cinzel;
+}
+
 .top {
-
     &__first-img {
-        background-image: url(../img/tools-864983_1920.jpg);
+        @include HeroImg("../img/tools-864983_1920.jpg");
+
     }
 
     &__second-img {
-        background-image: url(../img/kitchen-2165756_1920.jpg);
+        @include HeroImg("../img/kitchen-2165756_1920.jpg");
     }
 
-    &__first-img,
-    &__second-img {
-        height: 30vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        box-shadow: 1px 1px 10px #333;
-    }
+
+
 
     &__about-text {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     &__box-img {
@@ -313,26 +259,24 @@ $FontFamilyTitle: "Krub",
         margin: auto;
     }
 
-    &__title {
-        @include cinzel;
-    }
-
-    &__text {padding: 1.5em;
+    &__text {
+        padding: 1.5em;
         @include roboto;
     }
-
 }
 
+
+
 .middle {
-    margin: 0 auto;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    // margin: auto;
+    // max-width: 1200px;
 
     &__about-text {
-        margin: 6em 0 4em 0;
-    }
-
-    &__title {
-        @include cinzel;
+        margin: 4em 2em;
     }
 
     &__text {
@@ -340,12 +284,15 @@ $FontFamilyTitle: "Krub",
     }
 
     &__container {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
     }
 
-    &__article {
+    &__box {
         font-family: $FontFamilyTitle;
+        width: 100%;
         text-align: center;
     }
 
@@ -382,29 +329,33 @@ $FontFamilyTitle: "Krub",
 }
 
 .bottom {
-    margin: auto;
-    max-width: 1200px;
-    min-height: 100vh;
-    padding-bottom: 8rem;
-
-    &__title {
-        @include cinzel;
-    }
-
     &__text {
         @include roboto;
+        padding: 5em;
     }
 
+    //  &::before {
+    //      content: "";
+    //      position: absolute;
+    //      height: 40px;
+    //      width: 80%;
+    //      left: -50px;
+    //      background: red;
+    //      transform: skew(45deg);
+    //  }
 }
 
 .bgc-overlay {
     display: flex;
     justify-content: center;
-    width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../img/photo/inne/pexels-cal-david-735319.jpg) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0px 0px 10px black;
+   clip-path:ellipse( 200px 200px 200px);
+
+
+
 
     &__title {
         position: absolute;
@@ -417,11 +368,11 @@ $FontFamilyTitle: "Krub",
 .steps {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
 
     &__item {
         display: flex;
         flex-direction: column;
+        max-width: 350px;
         padding: 1em;
     }
 
@@ -433,8 +384,8 @@ $FontFamilyTitle: "Krub",
 
     &__icon {
         @include FontsIcon;
-        font-size: $FontSizeIcon - 1rem;
-        margin: 10px;
+        font-size: $FontSizeIcon - 0.3rem;
+        margin: 1em;
         padding: 0.4em;
         transition: transform .3s ease-in-out;
 
@@ -445,7 +396,7 @@ $FontFamilyTitle: "Krub",
 
 
     &__text-icon {
-        display: block;
+        display: none;
         width: auto;
         margin: 0.5em 0;
         padding: 0.25em 0;
@@ -455,7 +406,12 @@ $FontFamilyTitle: "Krub",
         text-transform: uppercase;
         letter-spacing: 2px;
         background: rgb(9, 230, 200);
+
+        &--active {
+            display: block;
+        }
     }
+
 }
 
 .details {
@@ -576,39 +532,73 @@ $FontFamilyTitle: "Krub",
 }
 
 
+// /CONTACT/ 
+.contact {
+    position: relative;
+    background-color: rgba(9, 230, 200, .5);
 
-// MEDIAAAAA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// @media (orientation: landscape) {
+    &__wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-//     .top-img,
-//     .middle-img {
-//         height: 40vh;
-//     }
-// }
 
-@media(min-width:465px) {
-  
-    .main {
-        .bottom {
-            width: 85%;
-        }
 
-        .middle-img {
-            border-radius: 15px 5px 15px 5px;
-        }
+    &__form,
+    &__form-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__form {
+        padding: 4em;
+    }
+
+    &__form-label {
+        margin: 0.5em;
+        text-transform: uppercase;
+    }
+
+    &__form-input {
+        @include ContactForm;
+    }
+
+    &__form-textarea {
+        @include ContactForm;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 150px;
+    }
+
+    &__form-btn {
+        align-self: flex-end;
+        padding: 0.5em 2.5em;
+        text-transform: uppercase;
+        font-family: $FontFamilyTitle;
+        color: whitesmoke;
+        background-color: #004759;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        cursor: pointer;
     }
 }
+
+
+// MEDIAAAAA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media (min-width:520px) {
     .main {
 
         &__text {
-            padding: 10px 20px;
             font-size: $FontSizeTitle + 1rem;
         }
 
         &__sub-text {
             font-size: $FontSizeWord + 0.5rem;
+            padding: 1em;
         }
 
     }
@@ -617,10 +607,6 @@ $FontFamilyTitle: "Krub",
 
 @media (min-width:690px) {
     .main {
-        &__text-container {
-            top: 200px;
-        }
-
         &__text {
             max-width: 40%;
             padding: 10px 20px;
@@ -633,11 +619,6 @@ $FontFamilyTitle: "Krub",
     }
 
     .middle {
-        &__container {
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 10px;
-        }
-
         // &__article {
         //     box-shadow: 2px 4px 5px #004759;
         //     border: 1px solid black;
@@ -649,11 +630,6 @@ $FontFamilyTitle: "Krub",
             font-size: $FontSizeSubTitle;
             color: rgba(0, 0, 0, 0.822);
             margin-bottom: 15px;
-        }
-
-        &__list {
-            color: rgba(0, 0, 0, 1);
-            padding: 15px;
         }
 
     }
@@ -670,6 +646,8 @@ $FontFamilyTitle: "Krub",
 
 
 @media(min-width:765px) {
+
+
     .burger-btn {
         &__tools {
             display: none;
@@ -698,7 +676,7 @@ $FontFamilyTitle: "Krub",
     }
 
     .header__logo {
-        margin: 10px auto 0 50px;
+        margin: 1em auto 0 5em;
 
     }
 
@@ -711,13 +689,7 @@ $FontFamilyTitle: "Krub",
         margin: auto 40px auto 20px;
     }
 
-    .steps {
-        max-width: 500px;
-    }
 }
-
-
-
 
 @media (min-width:1024px) {
 
@@ -739,7 +711,11 @@ $FontFamilyTitle: "Krub",
 
     .middle {
         &__container {
-            gap: 20%;
+            flex-direction: row;
+        }
+
+        &__box {
+            width: 25%;
         }
 
         &__subtitle {
@@ -748,15 +724,9 @@ $FontFamilyTitle: "Krub",
             margin-bottom: 15px;
         }
 
-        &__list {
-            color: rgba(0, 0, 0, 1);
-            padding: 20px;
-            font-size: $FontSizeWord + 0.1rem;
-        }
     }
 
     .steps {
-        max-width: 1200px;
         flex-direction: row;
     }
 
@@ -792,31 +762,5 @@ $FontFamilyTitle: "Krub",
             font-size: $FontSizeTitle - 0.4rem;
         }
 
-    }
-
-    .steps {
-        &__item {
-            padding: 1em;
-        }
-
-        &__icon {
-            font-size: $FontSizeIcon - 0.7rem;
-            padding: 0.4em;
-            margin: 20px;
-        }
-
-
-        &__text-icon {
-            width: 208px;
-            font-size: $FontSizeTitle - 0.8rem;
-        }
-    }
-
-    .details {
-        padding: 1.5em;
-
-        &__text {
-            font-size: $FontSizeWord - 0.1rem;
-        }
     }
 }

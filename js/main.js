@@ -2,8 +2,11 @@
 
 
 const btn = document.querySelector('.burger-btn__tools');
-const mainMenu = document.querySelector('.header');
-const AllNavItems = document.querySelectorAll('.header__item')
+const mainMenu = document.getElementsByName('.header');
+const AllNavItems = document.querySelector('.header__item');
+
+const stepsBtn = document.querySelector('.steps__icon');
+const stepsItem = document.querySelector('.steps__text-icon');
 
 const showMenu = () => {
     mainMenu.classList.toggle('header--active')
@@ -15,6 +18,8 @@ item.addEventListener('click', () => {
 })
 }
      btn.addEventListener('click', showMenu)
-    // btn.addEventListener('click', () =>{
-    //     mainMenu.classList.toggle('header--active');
-    // });
+  
+const showSteps = () => {
+    stepsItem.classList.toggle('steps__text-icon--active')
+}
+stepsBtn.addEventListener('click', showSteps)
