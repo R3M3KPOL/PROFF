@@ -35,6 +35,8 @@
 @import "./mixins";
 @import "./components";
 
+
+
 .burger-btn {
     position: fixed;
     background: transparent;
@@ -76,7 +78,7 @@
     min-height: 60px;
     background-image: linear-gradient(to bottom, #faf5f5, #009581, #004759);
     background-repeat: no-repeat;
-    z-index: 5;
+    z-index: 15;
     transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
 
     &--active {
@@ -179,31 +181,62 @@
     display: flex;
 }
 
-
-
-
-
-
-
 .wrapper {
-    background: linear-gradient(rgba(247, 245, 245, 0.5) 25%, rgba(0, 149, 129, 0.7) 85%, rgba(0, 71, 89, 0.9)),
-        url("../img/jdproff_logo.png") center no-repeat;
+    background: url("../img/jdproff_logo.png") center no-repeat;
     background-size: 30vmax;
     background-attachment: fixed;
 }
 
 .main {
-    margin: auto;
 
-    &__bgc-container {
-        background: url("../img/jdproff_logo.png") center no-repeat, linear-gradient(rgb(247, 245, 245) 25%, rgb(0, 149, 129) 85%, rgb(0, 71, 89));
-        background-size: 30vmax;
-        background-attachment: fixed;
+    &__bgfilter {
+        width: 100vw;
+        height: 100vh;
+        // position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(9, 230, 201, 0.40);
+        z-index: 10;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        // position: relative;
+        height: 100vh;
+        width: 100%;
+
+        &::after {
+            content: "";
+            bottom: 0;
+            position: absolute;
+            height: 40px;
+            width: 60%;
+            left: -50px;
+            background: white;
+            transform: skew(45deg);
+            z-index: 15;
+        }
+    }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        max-height: 100vh;
+        width: 100%;
+        z-index: 0;
+        object-fit: cover;
+
     }
 
     &__text-container {
+        position: absolute;
+        z-index: 10;
         @include MainText;
-        height: 100vh;
+        background: #004759;
+        max-width: 700px;
     }
 
     &__text {
@@ -211,8 +244,7 @@
         text-align: start;
         text-transform: uppercase;
         padding: 0.3em;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, .0) 90%);
-        color: #009581;
+        color: white;
     }
 
     &__sub-text {
@@ -220,7 +252,8 @@
         margin: 0;
         width: 100%;
         font-size: $FontSizeWord +0.3rem;
-        color: black;
+        color: white;
+        ;
     }
 
 }
@@ -231,19 +264,7 @@
 
 .top {
     &__first-img {
-        @include HeroImg("../img/tools-864983_1920.jpg");
-
-    }
-
-    &__second-img {
         @include HeroImg("../img/kitchen-2165756_1920.jpg");
-    }
-
-
-
-
-    &__about-text {
-        background-color: rgba(255, 255, 255, 0.9);
     }
 
     &__box-img {
@@ -333,16 +354,6 @@
         @include roboto;
         padding: 5em;
     }
-
-    //  &::before {
-    //      content: "";
-    //      position: absolute;
-    //      height: 40px;
-    //      width: 80%;
-    //      left: -50px;
-    //      background: red;
-    //      transform: skew(45deg);
-    //  }
 }
 
 .bgc-overlay {
@@ -352,7 +363,7 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 0px 0px 10px black;
-   clip-path:ellipse( 200px 200px 200px);
+    clip-path: ellipse(200px 200px 200px);
 
 
 
@@ -368,50 +379,108 @@
 .steps {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        max-width: 350px;
-        padding: 1em;
-    }
-
-    &__container {
+    &__title {
+        margin: auto;
+        font-family: "Krub",
+            "sans-serif";
+        font-size: 1em;
+        letter-spacing: 2px;
         text-align: center;
+        text-transform: uppercase;
+        color: black;
     }
 
+    &__text-header {
+        font-size: 2em;
+        padding: 2em;
+    }
 
+    &__timeline {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-    &__icon {
-        @include FontsIcon;
-        font-size: $FontSizeIcon - 0.3rem;
-        margin: 1em;
+    &__timeline-item {
+        padding: 1em;
+        text-align: center;
+        width: 20%;
+    }
+
+    &__timeline-icon {
+        background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
+        background-repeat: no-repeat;
+        color: white;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+        border: 2px solid rgba(44, 44, 44, 0.637);
+        border-radius: 50%;
+        font-size: 1.6em;
         padding: 0.4em;
-        transition: transform .3s ease-in-out;
+        margin: 1em;
 
-        &:hover {
-            transform: scale(1.2);
+        .fas,
+        .far {
+            pointer-events: none;
         }
+
     }
 
+    &__subtitle {
 
-    &__text-icon {
-        display: none;
+        opacity: 0;
         width: auto;
-        margin: 0.5em 0;
+        margin: 2.5em 0;
         padding: 0.25em 0;
-        font-family: $FontFamilyTitle;
-        font-size: $FontSizeTitle - 0.9rem;
+        font-family: "Krub",
+            "sans-serif";
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
-        background: rgb(9, 230, 200);
+        background: #09e6c8;
+        transition: all .3s;
 
         &--active {
-            display: block;
+            opacity: 1;
         }
+
     }
 
+    &__content {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__word {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        border: 1.5px solid #09e6c8;
+        border-radius: 0.5em;
+        padding: 1em;
+        margin: 1em 0.5em;
+        background-color: #09e6c863;
+    }
+
+    &__text-paragraf {
+        font-family: "Roboto",
+            "sans-serif";
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.616);
+        font-size: 1rem;
+        color: whitesmoke;
+    }
 }
 
 .details {
@@ -534,7 +603,7 @@
 
 // /CONTACT/ 
 .contact {
-    position: relative;
+    // position: relative;
     background-color: rgba(9, 230, 200, .5);
 
     &__wrapper {
@@ -610,11 +679,6 @@
         &__text {
             max-width: 40%;
             padding: 10px 20px;
-            font-size: $FontSizeTitle + 1rem;
-        }
-
-        &__sub-text {
-            font-size: $FontSizeWord + 0.5rem;
         }
     }
 
@@ -658,8 +722,7 @@
         flex-direction: row;
         height: auto;
         transform: translateX(0);
-        box-shadow: 0px 0px 15px 0px rgb(0, 0, 0);
-        background-image: linear-gradient(to right, #faf5f5, #009581, #004759);
+        background-image: linear-gradient(transparent);
 
         &__navigation {
             flex-grow: 0;
@@ -725,11 +788,6 @@
         }
 
     }
-
-    .steps {
-        flex-direction: row;
-    }
-
     .gallery {
         padding: 30px;
 
