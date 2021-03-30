@@ -1,17 +1,15 @@
 @mixin roboto {
     font-family: $FontFamilyWord;
     font-size: $FontSizeWord;
-    margin: auto;
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.5;
-    color: $WordColor;
+
 }
 
 @mixin cinzel {
     font-family: $FontFamilyTitle;
     font-size: $FontSizeTitle;
-    padding: 2em;
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
@@ -30,8 +28,8 @@
     background-repeat: no-repeat;
     color: white;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
-    border: 2px solid rgba(44, 44, 44, 0.637);
-    border-radius: 50%;
+    border: 1px solid black;
+    border-radius: 25px;
     cursor: pointer;
 }
 

@@ -19,9 +19,6 @@
 
 
 
-// zmieniam top middle bottom na
-
-
 * {
     margin: 0;
     padding: 0;
@@ -31,10 +28,23 @@
     // font-size: 62.5%;
 }
 
-@import "./fontsAndColors";
+@import "./fontsAndColors(include!)";
 @import "./mixins";
 @import "./components";
 
+.title-heading {
+    @include cinzel;
+    padding: 2em;
+}
+
+.tekst-box {
+    @include roboto;
+}
+
+.sub-title {
+    @include cinzel;
+    font-size: $FontSizeTitle - 0.35rem;
+}
 
 
 .burger-btn {
@@ -158,7 +168,7 @@
         &--border::after {
             content: "";
             position: absolute;
-            bottom: -0.5rem;
+            bottom: -0.2em;
             width: 0;
             border-bottom: 1px solid white;
             transition: all 0.2s ease-in-out;
@@ -192,7 +202,7 @@
 }
 
 .main {
-    margin-bottom: -50px;
+    // margin-bottom: -50px;
 
     &__bgfilter {
         width: 100vw;
@@ -207,7 +217,6 @@
     &__container {
         display: flex;
         align-items: center;
-        // position: relative;
         height: 100vh;
         width: 100%;
 
@@ -234,27 +243,23 @@
     }
 
     &__text {
-        font-family: $FontFamilyTitle;
+        @include cinzel;
+        font-size: 3rem;
         text-align: start;
-        text-transform: uppercase;
-        padding: 0.3em;
-        color: white;
+        padding-left: 1em;
+        color: whitesmoke;
     }
 
     &__sub-text {
         @include roboto;
-        margin: 0;
-        width: 100%;
-        font-size: $FontSizeWord +0.3rem;
-        color: white;
-        ;
+        font-size: 1.5rem;
+        color: whitesmoke;
     }
 
+
+
 }
 
-.title-heading {
-    @include cinzel;
-}
 
 .top {
     &__first-img {
@@ -274,10 +279,6 @@
         margin: auto;
     }
 
-    &__text {
-        padding: 1.5em;
-        @include roboto;
-    }
 }
 
 
@@ -287,41 +288,25 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    // margin: auto;
-    // max-width: 1200px;
 
     &__about-text {
-        margin: 4em 2em;
+        padding: 2em;
     }
 
-    &__text {
-        @include roboto;
+    &__title {
+        @include cinzel;
     }
 
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 100%;
-    }
-
-    &__box {
-        font-family: $FontFamilyTitle;
-        width: 100%;
         text-align: center;
+        width: 100%;
+
+
     }
 
-    &__subtitle {
-        font-size: $FontSizeSubTitle;
-        color: rgba(0, 0, 0, 0.822);
-        margin-bottom: 10px;
-    }
-
-    &__list {
-        color: rgba(0, 0, 0, 1);
-        font-size: $FontSizeWord;
-        padding: 20px;
-    }
 
 
     &__hammer,
@@ -343,15 +328,10 @@
     }
 }
 
-.bottom {
-    &__text {
-        @include roboto;
-        padding: 5em;
-    }
-}
+
 
 .bgc-overlay {
-    display: flex;
+    display: none;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.3)), url(../img/photo/inne/pexels-cal-david-735319.jpg) center no-repeat;
     background-size: cover;
@@ -363,8 +343,6 @@
 
     &__title {
         position: absolute;
-        @include cinzel;
-        font-size: $FontSizeTitle - 0.4rem;
     }
 
 }
@@ -378,21 +356,9 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    &__title {
-        font-family: "Krub",
-            "sans-serif";
-        font-size: 1em;
-        letter-spacing: 2px;
-        text-align: center;
-        text-transform: uppercase;
-        color: black;
-        padding: 1em;
-    }
 
-    &__text-header {
-        font-size: 2em;
-        padding: 1em;
-    }
+
+
 
     &__timeline {
         width: 100%;
@@ -418,19 +384,13 @@
     }
 
     &__timeline-icon {
-        background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
-        background-repeat: no-repeat;
-        color: white;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-        border: 2px solid rgba(44, 44, 44, 0.637);
-        border-radius: 50%;
-        font-size: 1.6em;
+        @include FontsIcon;
         padding: 0.4em;
         margin: 1em;
 
         &--active {
             background-image: radial-gradient(rgba(9, 230, 200, 0.5), rgba(9, 230, 200, 0.75), #09e6c8);
-            border: 2px solid #004759;
+            border: 1px solid #004759;
             box-shadow: 1px 1px 10px rgba(0, 149, 129, 0.60);
         }
 
@@ -520,35 +480,12 @@
         margin: auto;
         text-align: center;
         line-height: 1.5;
-        color: rgba(0, 0, 0, 0.616);
         font-size: 1rem;
         color: whitesmoke;
     }
 }
 
-.details {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    border: 1.5px solid rgb(9, 230, 200);
-    border-radius: 0.5em;
-    padding: 1em;
-    margin: 1em 0;
-    background-color: #09e6c863;
 
-
-    &__title {
-        @include cinzel;
-        font-size: $FontSizeTitle - 1rem;
-        color: rgb(0, 0, 0);
-    }
-
-    &__text {
-        @include roboto;
-        font-size: $FontSizeWord - 0.2rem;
-        color: whitesmoke;
-    }
-}
 
 
 
@@ -644,15 +581,41 @@
 }
 
 
-// /CONTACT/ 
+// /CONTACT/
+
 .contact {
-    // position: relative;
     background-color: rgba(9, 230, 200, .5);
 
     &__wrapper {
+        display: flex;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    &__box {
+        height: 40vh;
+        background-color: #004759cc;
+        padding: 1em 2em;
+        margin: 2em;
+        border-radius: 5px;
+    }
+&__lefttitle {
+   font-size: 1.7rem; 
+}
+    &__information {
+        color: white;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__subinformation {
+        padding: 2em 1em;
+        align-self: flex-end;
+        color: white;
+        font-size:$FontSizeWord - 0.2rem;
     }
 
 
@@ -662,10 +625,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-family: $FontFamilyWord;
     }
 
     &__form {
         padding: 4em;
+        background-color: #00958199;
+        border-radius: 5px;
+        margin:0 0 100px 50px;
     }
 
     &__form-label {
@@ -738,6 +705,7 @@
     height: 5vh;
     background-color: #004759;
 
+
     &__createdby {
         text-align: center;
         color: whitesmoke;
@@ -750,17 +718,10 @@
 // MEDIAAAAA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media (min-width:520px) {
-    .main {
 
-        &__text {
-            font-size: $FontSizeTitle + 1rem;
-        }
 
-        &__sub-text {
-            font-size: $FontSizeWord + 0.5rem;
-            padding: 1em;
-        }
-
+    .bgc-overlay {
+        display: flex;
     }
 
     .footer {
@@ -774,24 +735,7 @@
 }
 
 @media (min-width:690px) {
-    .main {
-        &__text {
-            max-width: 40%;
-            padding: 10px 20px;
-        }
-    }
 
-    .middle {
-
-
-
-        &__subtitle {
-            font-size: $FontSizeSubTitle;
-            color: rgba(0, 0, 0, 0.822);
-            margin-bottom: 15px;
-        }
-
-    }
 
     .gallery__services {
         flex: 0 0 170px;
@@ -852,7 +796,6 @@
 
     .top__box-img {
         flex-direction: row;
-        padding: 8em 0;
     }
 
     .top__img {
@@ -864,21 +807,6 @@
 @media (min-width:1024px) {
 
 
-    .top {
-        &__title {
-            font-size: $FontSizeTitle + 0.1rem;
-        }
-
-        &__img {
-            margin: auto 50px auto 100px;
-        }
-
-        &__text {
-            font-size: $FontSizeWord + .2rem;
-            margin: auto auto auto 50px;
-        }
-    }
-
     .middle {
         &__container {
             flex-direction: row;
@@ -886,12 +814,7 @@
 
         &__box {
             width: 25%;
-        }
 
-        &__subtitle {
-            font-size: $FontSizeSubTitle;
-            color: rgba(0, 0, 0, 0.822);
-            margin-bottom: 15px;
         }
 
     }
@@ -919,14 +842,4 @@
         }
     }
 
-}
-
-@media (min-width:1200px) {
-    .bgc-overlay {
-
-        &__title {
-            font-size: $FontSizeTitle - 0.4rem;
-        }
-
-    }
 }

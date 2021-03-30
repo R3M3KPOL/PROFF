@@ -13,6 +13,32 @@
   max-width: 1200px;
 }
 
+.title-heading {
+  font-family: "Krub", "sans-serif";
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2em;
+}
+
+.tekst-box {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.sub-title {
+  font-family: "Krub", "sans-serif";
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.45rem;
+}
+
 .burger-btn {
   position: fixed;
   background: transparent;
@@ -24,7 +50,7 @@
 
 .burger-btn__tools {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   color: black;
   border-radius: 15px 0px 15px;
@@ -148,7 +174,7 @@
 
 .header__item {
   font-family: "Krub", "sans-serif";
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   padding: 0 2px;
   text-transform: uppercase;
   color: white;
@@ -157,7 +183,7 @@
 .header__item--border::before, .header__item--border::after {
   content: "";
   position: absolute;
-  bottom: -0.5rem;
+  bottom: -0.2em;
   width: 0;
   border-bottom: 1px solid white;
   -webkit-transition: all 0.2s ease-in-out;
@@ -187,10 +213,6 @@
   background: url("../img/jdproff_logo.png") center no-repeat;
   background-size: 30vmax;
   background-attachment: fixed;
-}
-
-.main {
-  margin-bottom: -50px;
 }
 
 .main__bgfilter {
@@ -244,33 +266,24 @@
 
 .main__text {
   font-family: "Krub", "sans-serif";
-  text-align: start;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-align: center;
   text-transform: uppercase;
-  padding: 0.3em;
-  color: white;
+  font-size: 3rem;
+  text-align: start;
+  padding-left: 1em;
+  color: whitesmoke;
 }
 
 .main__sub-text {
   font-family: "Roboto", "sans-serif";
-  font-size: 1.25rem;
-  margin: auto;
+  font-size: 1.2rem;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.5;
-  color: black;
-  margin: 0;
-  width: 100%;
-  font-size: 1.55rem;
-  color: white;
-}
-
-.title-heading {
-  font-family: "Krub", "sans-serif";
-  font-size: 2rem;
-  padding: 2em;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: whitesmoke;
 }
 
 .top__first-img {
@@ -302,17 +315,6 @@
   margin: auto;
 }
 
-.top__text {
-  padding: 1.5em;
-  font-family: "Roboto", "sans-serif";
-  font-size: 1.25rem;
-  margin: auto;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  color: black;
-}
-
 .middle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,17 +331,15 @@
 }
 
 .middle__about-text {
-  margin: 4em 2em;
+  padding: 2em;
 }
 
-.middle__text {
-  font-family: "Roboto", "sans-serif";
-  font-size: 1.25rem;
-  margin: auto;
+.middle__title {
+  font-family: "Krub", "sans-serif";
+  font-size: 1.8rem;
+  letter-spacing: 2px;
   text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  color: black;
+  text-transform: uppercase;
 }
 
 .middle__container {
@@ -352,37 +352,20 @@
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
-}
-
-.middle__box {
-  font-family: "Krub", "sans-serif";
-  width: 100%;
   text-align: center;
-}
-
-.middle__subtitle {
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.822);
-  margin-bottom: 10px;
-}
-
-.middle__list {
-  color: black;
-  font-size: 1.25rem;
-  padding: 20px;
+  width: 100%;
 }
 
 .middle__hammer, .middle__toolbox, .middle__roller {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 0.3em;
   background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
   background-repeat: no-repeat;
   color: white;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
-  border: 2px solid rgba(44, 44, 44, 0.637);
-  border-radius: 50%;
+  border: 1px solid black;
+  border-radius: 25px;
   cursor: pointer;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: -webkit-transform .3s ease-in-out;
@@ -404,21 +387,8 @@
           box-shadow: 1px 1px 10px rgba(0, 149, 129, 0.61);
 }
 
-.bottom__text {
-  font-family: "Roboto", "sans-serif";
-  font-size: 1.25rem;
-  margin: auto;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  color: black;
-  padding: 5em;
-}
-
 .bgc-overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -432,13 +402,6 @@
 
 .bgc-overlay__title {
   position: absolute;
-  font-family: "Krub", "sans-serif";
-  font-size: 2rem;
-  padding: 2em;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.6rem;
 }
 
 .steps {
@@ -458,21 +421,6 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.steps__title {
-  font-family: "Krub", "sans-serif";
-  font-size: 1em;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  color: black;
-  padding: 1em;
-}
-
-.steps__text-header {
-  font-size: 2em;
-  padding: 1em;
 }
 
 .steps__timeline {
@@ -513,21 +461,23 @@
 }
 
 .steps__timeline-icon {
+  font-size: 1.5rem;
+  padding: 0.3em;
   background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
   background-repeat: no-repeat;
   color: white;
-  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
-  border: 2px solid rgba(44, 44, 44, 0.637);
-  border-radius: 50%;
-  font-size: 1.6em;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: pointer;
   padding: 0.4em;
   margin: 1em;
 }
 
 .steps__timeline-icon--active {
   background-image: radial-gradient(rgba(9, 230, 200, 0.5), rgba(9, 230, 200, 0.75), #09e6c8);
-  border: 2px solid #004759;
+  border: 1px solid #004759;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 149, 129, 0.6);
           box-shadow: 1px 1px 10px rgba(0, 149, 129, 0.6);
 }
@@ -638,49 +588,7 @@
   margin: auto;
   text-align: center;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.616);
   font-size: 1rem;
-  color: whitesmoke;
-}
-
-.details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  border: 1.5px solid #09e6c8;
-  border-radius: 0.5em;
-  padding: 1em;
-  margin: 1em 0;
-  background-color: #09e6c863;
-}
-
-.details__title {
-  font-family: "Krub", "sans-serif";
-  font-size: 2rem;
-  padding: 2em;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: black;
-}
-
-.details__text {
-  font-family: "Roboto", "sans-serif";
-  font-size: 1.25rem;
-  margin: auto;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  color: black;
-  font-size: 1.05rem;
   color: whitesmoke;
 }
 
@@ -750,7 +658,7 @@
   text-transform: uppercase;
   color: white;
   font-family: sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   -webkit-transition: opacity .035s;
   transition: opacity .035s;
   text-shadow: 2px 2px 2px black;
@@ -811,9 +719,47 @@
 }
 
 .contact__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.contact__box {
+  height: 40vh;
+  background-color: #004759cc;
+  padding: 1em 2em;
+  margin: 2em;
+  border-radius: 5px;
+}
+
+.contact__lefttitle {
+  font-size: 1.7rem;
+}
+
+.contact__information {
+  color: white;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact__subinformation {
+  padding: 2em 1em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: white;
+  font-size: 1rem;
 }
 
 .contact__form, .contact__form-top {
@@ -827,10 +773,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Roboto", "sans-serif";
 }
 
 .contact__form {
   padding: 4em;
+  background-color: #00958199;
+  border-radius: 5px;
+  margin: 0 0 100px 50px;
 }
 
 .contact__form-label {
@@ -931,12 +881,10 @@
 }
 
 @media (min-width: 520px) {
-  .main__text {
-    font-size: 3rem;
-  }
-  .main__sub-text {
-    font-size: 1.75rem;
-    padding: 1em;
+  .bgc-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .footer__container {
     -webkit-box-orient: horizontal;
@@ -947,15 +895,6 @@
 }
 
 @media (min-width: 690px) {
-  .main__text {
-    max-width: 40%;
-    padding: 10px 20px;
-  }
-  .middle__subtitle {
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.822);
-    margin-bottom: 15px;
-  }
   .gallery__services {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 170px;
@@ -1008,7 +947,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 8em 0;
   }
   .top__img {
     margin: auto 40px auto 20px;
@@ -1016,16 +954,6 @@
 }
 
 @media (min-width: 1024px) {
-  .top__title {
-    font-size: 2.1rem;
-  }
-  .top__img {
-    margin: auto 50px auto 100px;
-  }
-  .top__text {
-    font-size: 1.45rem;
-    margin: auto auto auto 50px;
-  }
   .middle__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1034,11 +962,6 @@
   }
   .middle__box {
     width: 25%;
-  }
-  .middle__subtitle {
-    font-size: 1.5rem;
-    color: rgba(0, 0, 0, 0.822);
-    margin-bottom: 15px;
   }
   .gallery {
     padding: 30px;
@@ -1059,12 +982,6 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-}
-
-@media (min-width: 1200px) {
-  .bgc-overlay__title {
-    font-size: 1.6rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
