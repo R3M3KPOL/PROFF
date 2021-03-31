@@ -13,12 +13,17 @@
   max-width: 1200px;
 }
 
+.wrapper-style {
+  padding: 2em;
+  margin: 0 auto;
+}
+
 .title-heading {
   font-family: "Archivo Black", sans-serif;
   font-size: 1.8rem;
   text-align: center;
   text-transform: uppercase;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .tekst-box {
@@ -36,6 +41,19 @@
   letter-spacing: 1px;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.logo-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 auto;
+          flex: 2 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 2em;
 }
 
 .burger-btn {
@@ -100,20 +118,6 @@
           box-shadow: 0 3px 20px rgba(0, 71, 89, 0.4);
 }
 
-.header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-width: 290px;
-  margin: auto;
-}
-
 .header__img {
   height: 50px;
   width: 50px;
@@ -128,11 +132,9 @@
 }
 
 .header__navigation {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  width: 45%;
-  margin-right: 5vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .header__main-menu {
@@ -143,13 +145,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.75rem;
 }
 
 .header__list {
@@ -274,38 +274,45 @@
   color: whitesmoke;
 }
 
-.top {
-  padding: 3em 0;
-}
-
-.top__first-img {
-  background-image: url("../img/kitchen-2165756_1920.jpg");
-  height: 40vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
 .top__box-img {
   padding: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
 }
 
 .top__img {
   height: 400px;
   width: 250px;
   margin: 40px auto;
+}
+
+.top__about {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.top__text-first, .top__text-second {
+  padding: 1.5em;
+}
+
+.first-img {
+  background-image: url("../img/kitchen-2165756_1920.jpg");
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .middle {
@@ -321,7 +328,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3em;
 }
 
 .middle__about-text {
@@ -586,8 +592,9 @@
   color: whitesmoke;
 }
 
-.bottom {
-  padding: 3em;
+.bottom__about-text {
+  margin: auto;
+  max-width: 1200px;
 }
 
 .gallery {
@@ -843,19 +850,6 @@
           flex-direction: column;
 }
 
-.footer__log {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 2;
-      -ms-flex: 2 0 auto;
-          flex: 2 0 auto;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 1em 2em;
-}
-
 .footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -918,6 +912,9 @@
 }
 
 @media (min-width: 765px) {
+  .wrapper-style {
+    padding: 1.5em;
+  }
   .burger-btn__tools {
     display: none;
   }
@@ -932,25 +929,13 @@
     background-image: -webkit-gradient(linear, left top, left bottom, from(transparent));
     background-image: linear-gradient(transparent);
   }
-  .header__navigation {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-  }
-  .header__list {
-    margin: 0;
-  }
   .header__main-menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .header__logo {
-    padding: 0.3em;
-    margin: 1em auto 0 5em;
-  }
-  .top__box-img {
+  .top__about {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

@@ -4,5 +4,28 @@
     max-width: 1200px;
 }
 
+.wrapper-style {
+    padding: 2em;
+    margin: 0 auto;
+}
 
+.title-heading {
+    @include cinzel;
+    padding: 1.5em;
+}
 
+.tekst-box {
+    @include roboto;
+}
+
+.sub-title {
+    @include roboto;
+    font-size: $FontSizeTitle - 0.3rem;
+}
+
+.logo-left {
+    display: flex;
+    flex: 2 0 auto;
+    align-items: center;
+    padding: 1em 2em;
+}
