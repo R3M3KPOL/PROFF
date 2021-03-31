@@ -817,8 +817,8 @@
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
-  max-width: 100%;
-  min-width: 100%;
+  max-width: 400px;
+  min-width: 400px;
   min-height: 150px;
 }
 
