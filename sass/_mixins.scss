@@ -10,7 +10,6 @@
 @mixin cinzel {
     font-family: $FontFamilyTitle;
     font-size: $FontSizeTitle;
-    letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -23,13 +22,13 @@
 
 @mixin FontsIcon {
     font-size: $FontSizeIcon;
-    padding: 0.3em;
+    padding: 0.6em;
     background-image: radial-gradient(circle, #09e6c8, #009581, #004759);
     background-repeat: no-repeat;
     color: white;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.61);
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -48,5 +47,5 @@
     padding: 0.5em 1em;
     border:none;
     border-radius: 5px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }

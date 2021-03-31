@@ -8,6 +8,8 @@ const stepsBtn = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]')
 const mainMenu = document.querySelector('.header');
 const bgcContainerVideo = document.querySelector('.main__container');
+const footerYear = document.querySelector('.box-author__copy')
+const onOneOptions = {rootMargin: "-125px 0px 0px 0px"};
 // const mediaQuery = window.matchMedia ('(min-width:765px)');
 
 const showMenu = () => {
@@ -22,7 +24,7 @@ item.addEventListener('click', () => {
 };
 btn.addEventListener('click', showMenu)
   
-const onOneOptions = {rootMargin: "-85px 0px 0px 0px"};
+
 
 const observer = new IntersectionObserver(function(entries )
 {
@@ -35,11 +37,15 @@ if(!entry.isIntersecting) {
 }
 });
 },
-);
+onOneOptions);
 observer.observe(bgcContainerVideo)
 
 
-
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year ;
+}
+handleCurrentYear();
 
 
 
