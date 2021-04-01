@@ -15,7 +15,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2em;
   margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -31,7 +30,6 @@
   text-align: center;
   text-transform: uppercase;
   padding: 1.5em;
-  margin: auto;
   position: relative;
   z-index: 2;
 }
@@ -93,7 +91,7 @@
   background: transparent;
   border: none;
   top: calc(0% + 25px);
-  left: 90%;
+  left: 85%;
   z-index: 1000;
 }
 
@@ -298,7 +296,7 @@
   font-size: 1.8rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.3rem;
   text-align: start;
   padding-left: 1em;
   color: whitesmoke;
@@ -310,12 +308,9 @@
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 1em;
   color: whitesmoke;
-}
-
-.top__box-img {
-  padding: 2em;
 }
 
 .top__img {
@@ -339,6 +334,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
+  padding: 2em;
 }
 
 .top__text-first, .top__text-second {
@@ -360,8 +356,8 @@
           align-items: center;
 }
 
-.middle__about-text {
-  padding: 1em;
+.middle__about {
+  padding: 2em;
 }
 
 .middle__title {
@@ -607,7 +603,8 @@
   color: whitesmoke;
 }
 
-.bottom__about-text {
+.bottom__about {
+  padding: 2em;
   margin: auto;
   max-width: 1200px;
 }
@@ -734,7 +731,6 @@
 }
 
 .contact__heading {
-  padding: 2em;
   color: whitesmoke;
 }
 
@@ -800,7 +796,7 @@
 }
 
 .contact__form {
-  padding: 2em;
+  padding: 1em;
   background-color: white;
   border-radius: 5px;
   margin: 100px auto;

@@ -39,7 +39,7 @@
     background: transparent;
     border: none;
     top: calc(0% + 25px);
-    left: 90%;
+    left: 85%;
     z-index: 1000;
 
 
@@ -215,7 +215,7 @@
 
     &__text {
         @include cinzel;
-        font-size: 3rem;
+        font-size: 2.3rem;
         text-align: start;
         padding-left: 1em;
         color: whitesmoke;
@@ -223,7 +223,8 @@
 
     &__sub-text {
         @include roboto;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        padding: 1em;
         color: whitesmoke;
     }
 
@@ -233,23 +234,20 @@
 
 
 .top {
-    &__box-img {
-        padding: 2em;
-
-    }
 
     &__img {
         width: 250px;
         margin: 40px auto;
     }
 
-    &__about {
+    &__about{
         max-width: 1200px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         margin: auto;
+        padding: 2em;
     }
 
     &__text-first,
@@ -266,8 +264,8 @@
 .middle {
     align-items: center;
 
-    &__about-text {
-        padding: 1em;
+    &__about{
+        padding: 2em;
     }
 
     &__title {
@@ -448,7 +446,8 @@
     }
 }
 
-.bottom__about-text {
+.bottom__about {
+    padding: 2em;
     margin: auto;
     max-width: 1200px;
 }
@@ -550,7 +549,6 @@
     background-color: #004759cc;
 
     &__heading {
-        padding: 2em;
         color: whitesmoke;
 
     }
@@ -600,7 +598,7 @@
     }
 
     &__form {
-        padding: 2em;
+        padding: 1em;
         background-color: white;
         border-radius: 5px;
         margin: 100px auto;

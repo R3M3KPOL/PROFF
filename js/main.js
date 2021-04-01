@@ -62,14 +62,14 @@ tab.classList.add('steps__timeline-icon--active')
 
 const appearOptions = {
     threshold: 1,
-    rootMargin: "100px 0px 0px 0px"
+    rootMargin: "0px 0px 100px 0px"
 };
 const faders = document.querySelectorAll('.fade-in')
 
 
-const appearOnScroll = new IntersectionObserver (function (entries, appearOnScroll)
+const appearOnScroll = new IntersectionObserver (function (Entries, appearOnScroll)
  {
-entries.forEach(entry => {
+Entries.forEach(entry => {
 if (! entry.isIntersecting){
     return;
 }else {
