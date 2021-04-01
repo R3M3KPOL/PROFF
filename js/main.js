@@ -59,10 +59,10 @@ tab.classList.add('steps__timeline-icon--active')
 
 })
 
-
+// DLACZEGO ROOTMARGIN 1000!?
 const appearOptions = {
     threshold: 1,
-    rootMargin: "0px 0px 100px 0px"
+    rootMargin: "1000px 0px 0px 0px"
 };
 const faders = document.querySelectorAll('.fade-in')
 
