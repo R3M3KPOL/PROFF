@@ -26,10 +26,10 @@
 
 .title-heading {
   font-family: "Archivo Black", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  padding: 1.5em;
+  padding: 1em;
   position: relative;
   z-index: 2;
 }
@@ -60,7 +60,7 @@
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .logo-left {
@@ -293,7 +293,7 @@
 
 .main__text {
   font-family: "Archivo Black", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
   font-size: 2.3rem;
@@ -362,7 +362,7 @@
 
 .middle__title {
   font-family: "Archivo Black", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -920,6 +920,10 @@
 }
 
 @media (min-width: 765px) {
+  .title-heading {
+    font-size: 1.8rem;
+    padding: 1.5em;
+  }
   .wrapper-style {
     padding: 1.5em;
   }
