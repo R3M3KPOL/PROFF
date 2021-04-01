@@ -23,18 +23,22 @@
         <i class="fas fa-bars burger-btn__tools"></i>
     </button>
     <header class="header">
-        <div class="header__logo logo-left">
-            <div class="header__img"></div>
-            <span class="header__title">PROFF</span>
+        <div class="header__container">
+            <div class="header__logo logo-left">
+                <div class="header__img"></div>
+                <span class="header__title">PROFF</span>
+            </div>
+            <nav class="header__navigation">
+                <ul class="header__main-menu">
+                    <li class="header__list"><a href="#top" class="header__item header__item--border">O nas</a></li>
+                    <li class="header__list"><a href="#middle" class="header__item header__item--border">Oferta</a></li>
+                    <li class="header__list"><a href="#bottom" class="header__item header__item--border">Galeria</a>
+                    </li>
+                    <li class="header__list header__list--border"><a href="#contact" class="header__item">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="header__navigation">
-            <ul class="header__main-menu">
-                <li class="header__list"><a href="#top" class="header__item header__item--border">O nas</a></li>
-                <li class="header__list"><a href="#middle" class="header__item header__item--border">Oferta</a></li>
-                <li class="header__list"><a href="#bottom" class="header__item header__item--border">Galeria</a></li>
-                <li class="header__list header__list--border"><a href="#contact" class="header__item">Kontakt</a></li>
-            </ul>
-        </nav>
     </header>
 
 
@@ -57,7 +61,7 @@
 
         <section id="top" class="top  wrapper-style">
             <h2 class="top__title title-heading">O nas</h2>
-            <div class="top__about">
+            <div class="top__about fade-in">
                 <div class="top__box-img"><img src="img/photo/inne/IMG_20190608_205825 MINI.jpg" alt=""
                         class="top__img"></div>
                 <div class="top__text tekst-box">
@@ -81,12 +85,12 @@
         </section>
         <div class="first-img"></div>
         <section id="middle" class="middle wrapper-style">
+            <h2 class="middle__title  title-heading">Oferta</h2>
             <div class="middle__about-text">
-                <h2 class="middle__title">Oferta</h2>
-                <p class="middle__text tekst-box">Kluczowymi sektorami w działalności naszej firmy są:
+                <p class="middle__text tekst-box fade-in">Kluczowymi sektorami w działalności naszej firmy są:
                 </p>
             </div>
-            <div class="middle__container">
+            <div class="middle__container fade-in">
                 <div class="middle__box">
                     <i class="fas fa-hammer middle__hammer"></i>
                     <h2 class="middle__subtitle sub-title"> Stolarka wewnętrzna i zewnętrzna
@@ -98,7 +102,7 @@
                     <li class="middle__list tekst-box">Montaż drzwi i okien</li>
                     <li class="middle__list tekst-box">Układanie parkietów</li>
                 </div>
-                <div class="middle__box">
+                <div class="middle__box ">
                     <i class="fas fa-toolbox  middle__toolbox"></i>
                     <h2 class="middle__subtitle sub-title">Montaż mebli
                     </h2>
@@ -116,32 +120,37 @@
             </div>
         </section>
 
-        <div class="bgc-overlay wrapper-style">
-            <section class="steps">
+        <section class="steps  wrapper-style">
+            <div class="bgc-overlay">
                 <div class="steps__title">
                     <h2 class="steps__text  sub-title">Pięc kroków</h2>
                 </div>
                 <div class="steps__timeline">
                     <div class="steps__container-heading">
-                        <div data-tab-target="#one" class="steps__heading">
-                            <a href="#0" class="steps__timeline-icon steps__timeline-icon--active"><i
+                        <div class="steps__heading">
+                            <a href="#0" data-tab-target="#one"
+                                class="steps__timeline-icon steps__timeline-icon--active"><i
                                     class="fas fa-phone-alt"></i></a>
                             <h3 class="steps__subtitle ">Krok pierwszy</h3>
                         </div>
-                        <div data-tab-target="#two" class="steps__heading">
-                            <a href="#0" class="steps__timeline-icon"><i class="fas fa-drafting-compass"></i></a>
+                        <div class="steps__heading">
+                            <a href="#0" data-tab-target="#two" class="steps__timeline-icon"><i
+                                    class="fas fa-drafting-compass"></i></a>
                             <h3 class="steps__subtitle">Krok drugi</h3>
                         </div>
-                        <div data-tab-target="#three" class="steps__heading">
-                            <a href="#0" class="steps__timeline-icon"><i class=" fas fa-hand-holding-usd"></i></a>
+                        <div class="steps__heading">
+                            <a href="#0" data-tab-target="#three" class="steps__timeline-icon"><i
+                                    class=" fas fa-hand-holding-usd"></i></a>
                             <h3 class="steps__subtitle">Krok trzeci</h3>
                         </div>
-                        <div data-tab-target="#four" class="steps__heading">
-                            <a href="#0" class="steps__timeline-icon"><i class="fas fa-tools"></i></a>
+                        <div class="steps__heading">
+                            <a href="#0" data-tab-target="#four" class="steps__timeline-icon"><i
+                                    class="fas fa-tools"></i></a>
                             <h3 class="steps__subtitle">Krok czwarty</h3>
                         </div>
-                        <div data-tab-target="#five" class="steps__heading">
-                            <a href="#0" class="steps__timeline-icon"><i class="far fa-smile-wink"></i></a>
+                        <div class="steps__heading">
+                            <a href="#0" data-tab-target="#five" class="steps__timeline-icon"><i
+                                    class="far fa-smile-wink"></i></a>
                             <h3 class="steps__subtitle">Krok piąty</h3>
                         </div>
                     </div>
@@ -193,11 +202,11 @@
                 </div>
 
 
-            </section>
-        </div>
+            </div>
+        </section>
         <section id="bottom" class="bottom wrapper-style">
+            <h2 class="bottom__title title-heading">Nasze projekty</h2>
             <div class="bottom__about-text">
-                <h2 class="bottom__title title-heading">Nasze projekty</h2>
                 <p class="bottom__text-first tekst-box">Korzystając z naszej wiedzy i nabytych umiejętności, doradzamy
                     klientom aby
                     uzyskać jak
@@ -278,7 +287,7 @@
             <h2 class="contact__heading title-heading">Skontaktuj się z nami</h2>
 
             <div class="contact__wrapper">
-                <div class="contact__box">
+                <div class="contact__box fade-in">
                     <h3 class="contact__lefttitle sub-title">Porozmawiajmy o Twoim projekcie</h3>
                     <div class="contact__information">
                         <p class="contact__paragraf tekst-box">W przypadku zainteresowania naszą ofertą z
@@ -310,7 +319,7 @@
     </main>
 
     <footer class="footer wrapper-style">
-        <div class="footer__container">
+        <div class="footer__container ">
             <div class="footer__log logo-left">
                 <div class="footer__img header__img"></div>
                 <span class="footer__title header__title">PROFF</span>

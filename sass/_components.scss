@@ -1,17 +1,33 @@
-.wrapper-coponents {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-}
+
 
 .wrapper-style {
+    display: flex;
+    flex-direction: column;
     padding: 2em;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-heading {
     @include cinzel;
     padding: 1.5em;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 65%;
+        height: 20%;
+        position: absolute;
+        left: 0;
+        top: 30%;
+        background-color: #009581;
+        z-index: -1;
+
+    }
 }
 
 .tekst-box {
@@ -28,4 +44,13 @@
     flex: 2 0 auto;
     align-items: center;
     padding: 1em 2em;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
 }

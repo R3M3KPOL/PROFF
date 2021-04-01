@@ -34,18 +34,18 @@
 
 @mixin HeroImg ($bgcImg) {
     background-image: url($bgcImg);
-    height: 40vh;
+    height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    
+
 }
 
 @mixin ContactForm {
     margin-bottom: 2em;
     padding: 0.5em 1em;
-    border:none;
+    border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }

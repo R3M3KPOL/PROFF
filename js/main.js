@@ -26,10 +26,11 @@ btn.addEventListener('click', showMenu)
   
 
 
+
+
 const observer = new IntersectionObserver(function(entries )
 {
 entries.forEach(entry =>{
-// console.log(entry.target);
 if(!entry.isIntersecting) {
     mainMenu.classList.add('header--activeBgc')
 } else {
@@ -41,23 +42,55 @@ onOneOptions);
 observer.observe(bgcContainerVideo)
 
 
+
+stepsBtn.forEach(tab =>{
+tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+    tabContents.forEach(tabContent =>{
+        tabContent.classList.remove('steps__word--active')
+    })
+stepsBtn.forEach(tab =>{
+    tab.classList.remove('steps__timeline-icon--active')
+})
+tab.classList.add('steps__timeline-icon--active')
+    target.classList.add('steps__word--active')
+
+})
+
+})
+
+
+const appearOptions = {
+    threshold: 1,
+    rootMargin: "100px 0px 0px 0px"
+};
+const faders = document.querySelectorAll('.fade-in')
+
+
+const appearOnScroll = new IntersectionObserver (function (entries, appearOnScroll)
+ {
+entries.forEach(entry => {
+if (! entry.isIntersecting){
+    return;
+}else {
+    entry.target.classList.add('appear')
+    appearOnScroll.unobserve(entry.target);
+}
+})
+}, appearOptions)
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+
+
+
 const handleCurrentYear = () => {
     const year = (new Date).getFullYear();
     footerYear.innerText = year ;
 }
 handleCurrentYear();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -113,22 +146,6 @@ handleCurrentYear();
 // } 
 // window.addEventListener('scroll', HandleObserver )
 
-
-stepsBtn.forEach(tab =>{
-tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget);
-    tabContents.forEach(tabContent =>{
-        tabContent.classList.remove('steps__word--active')
-    })
-    target.classList.add('steps__word--active')
-// if (target == 'steps__word--active') {
-//     console.log(`hello`);
-   
-// }
-
-})
-
-})
 
 
 // stepsBtn.forEach((element) => {
