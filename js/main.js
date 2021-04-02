@@ -61,8 +61,8 @@ tab.classList.add('steps__timeline-icon--active')
 
 // DLACZEGO ROOTMARGIN 1000!?
 const appearOptions = {
-    threshold: 1,
-    rootMargin: "1000px 0px 0px 0px"
+    threshold:0.5,
+    rootMargin: "0px 0px 0px 0px "
 };
 const faders = document.querySelectorAll('.fade-in')
 
@@ -70,11 +70,13 @@ const faders = document.querySelectorAll('.fade-in')
 const appearOnScroll = new IntersectionObserver (function (Entries, appearOnScroll)
  {
 Entries.forEach(entry => {
+    console.log('scroll')
 if (! entry.isIntersecting){
     return;
 }else {
     entry.target.classList.add('appear')
     appearOnScroll.unobserve(entry.target);
+    console.log('good scroll')
 }
 })
 }, appearOptions)
