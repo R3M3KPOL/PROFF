@@ -217,7 +217,7 @@
         @include cinzel;
         font-size: 2.3rem;
         text-align: start;
-        padding-left: 1em;
+        padding-left: 0.5em;
         color: whitesmoke;
     }
 
@@ -259,6 +259,41 @@
 .first-img {
     @include HeroImg("../img/kitchen-2165756_1920.jpg");
 }
+
+.whyUs {
+    max-width: 1600px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    &__item-img {
+        height: 210px;
+        max-width: 350px;
+        object-fit: cover;
+    }
+
+    &__item-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        width: 70%;
+        padding: 2em 1em;
+        margin: 1.5rem 0;
+    }
+
+    &__subtitle {
+        border-bottom: 2px solid #009581;
+    }
+}
+
+
+
 
 
 .middle {
@@ -765,20 +800,32 @@
 
         }
 
-        .top__about {
-            flex-direction: row;
-        }
-
         .top__img {
             margin: 40px;
         }
+    }
 
-        .contact {
-            &__wrapper {
-                flex-direction: row;
-            }
+    .top__about {
+        flex-direction: row;
+    }
+
+    .contact {
+        &__wrapper {
+            flex-direction: row;
         }
+    }
 
+
+    .whyUs__item-box {
+        flex-direction: row;
+        gap: 30px;
+        width: 70%;
+        padding: 2em 1em;
+        margin: 1.5rem 0;
+
+        &--right {
+            flex-direction: row-reverse;
+        }
     }
 }
 

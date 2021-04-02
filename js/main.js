@@ -59,7 +59,7 @@ tab.classList.add('steps__timeline-icon--active')
 
 })
 
-// DLACZEGO ROOTMARGIN 1000!?
+
 const appearOptions = {
     threshold:0.5,
     rootMargin: "0px 0px 0px 0px "
