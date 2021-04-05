@@ -231,16 +231,30 @@
 
 
 }
+
 .class {
     display: flex;
     align-content: center;
     justify-content: center;
     width: 100%;
+    max-width: 1200px;
+    // margin: auto;
 }
 
 .img-ulotka {
+    display: flex;
     margin: auto;
     width: 600px;
+}
+
+.tekst {
+    width: 1200px;
+    margin: auto;
+}
+
+.h1{
+    width: 500px;
+    margin: auto;
 }
 
 .top {
@@ -930,7 +944,8 @@
     .contact__form-textarea {
         min-width: 400px;
     }
-.previewBox {
+
+    .previewBox {
         width: 400px;
         max-width: 600px;
     }

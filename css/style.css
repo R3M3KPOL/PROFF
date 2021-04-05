@@ -323,11 +323,25 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  max-width: 1200px;
 }
 
 .img-ulotka {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
   width: 600px;
+}
+
+.tekst {
+  width: 1200px;
+  margin: auto;
+}
+
+.h1 {
+  width: 500px;
+  margin: auto;
 }
 
 .top__img {
