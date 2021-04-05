@@ -313,6 +313,23 @@
   color: whitesmoke;
 }
 
+.class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.img-ulotka {
+  margin: auto;
+  width: 600px;
+}
+
 .top__img {
   width: 250px;
   margin: 40px auto;
