@@ -10,7 +10,16 @@ const mainMenu = document.querySelector('.header');
 const bgcContainerVideo = document.querySelector('.main__container');
 const footerYear = document.querySelector('.box-author__copy')
 const onOneOptions = {rootMargin: "-125px 0px 0px 0px"};
-// const mediaQuery = window.matchMedia ('(min-width:765px)');
+
+// for gallery
+const filterItem = document.querySelector('.gallery__nav-box');
+const  filterImg = document.querySelectorAll('.gallery__items');
+
+const previewBox = document.querySelector(".previewBox"),
+previewImg = previewBox.querySelector(".previewBox__img"),
+categoryName = previewBox.querySelector(".previewBox__title"),
+closeIcon = previewBox.querySelector(".previewBox__icon");
+
 
 const showMenu = () => {
     mainMenu.classList.toggle('header--active')
@@ -95,74 +104,47 @@ const handleCurrentYear = () => {
 handleCurrentYear();
 
 
+// gallery!!!
+
+window.onload = () => { 
+
+    filterItem.addEventListener('click', (e) => {
+
+        if(e.target.classList.contains("gallery__nav-item"))
+      {filterItem.querySelector(".gallery__nav-item--active").classList.remove("gallery__nav-item--active")
+      e.target.classList.add("gallery__nav-item--active");}
+      let filterName = e.target.getAttribute("data-name");
+    //   console.log(filterName);
+
+filterImg.forEach((image) => {
+    let filterImages = image.getAttribute("data-name");
+    // console.log(filterImages);
+    if((filterImages == filterName ) || filterName == "all") {
+        image.classList.remove("gallery__items--show");
+        image.classList.add("gallery__items--show");
+    }else {
+        image.classList.add("gallery__items--hide");
+        image.classList.remove("gallery__items--show");}
+    })
+    })
 
 
+filterImg.forEach(elem => {
 
+    elem.addEventListener('click', () => {
+        previewBox.classList.add('previewBox--show');
 
-// const HandleObserver = () => {
+        const originalSrc = elem.getAttribute("data-original")
+    previewImg.src = `./img/photo/full/${originalSrc}`;
+    const imgCategoryName = elem.getAttribute("data-name")
+        categoryName.textContent = imgCategoryName ;
 
-//     if (window.scrollY > 0 && mediaQuery.matches )
-//     {mainMenu.style.cssText = 
-//     `
-//    background-color: #5fbeb7;
-//    color:#004759; 
-//     `}
-// else
-// {mainMenu.style.cssText = 
-//     `
-//    background-color: transparent;
-//    color:#FFFFFF; 
-//     `}
+    
+})
+    closeIcon.addEventListener('click', () => {
+        previewBox.classList.remove('previewBox--show');
+    })
 
-// }
+})
 
-// window.addEventListener('scroll', HandleObserver);
-
-
-
-
-
-// const HandleObserver = () => {
-
-// const scrollSection = window.scrollY;
-
-// allSection.forEach(section => {
-
-// if(section.classList.contains('wrapper') && section.offsetTop <= scrollSection  && mediaQuery.matches)
-// {mainMenu.style.cssText = 
-//     `
-//    background-color: #5fbeb7;
-//    color:#004759; 
-//     `}
-//     else(
-//         ! ( section.classList.contains('wrapper') && section.offsetTop <= scrollSection && mediaQuery.matches))
-// {
-//   mainMenu.style.cssText =
-//   `
-//    background-color:transparent;
-//    color:#FFFFFF;     
-//    `
-// }
-// })
-
-// } 
-// window.addEventListener('scroll', HandleObserver )
-
-
-
-// stepsBtn.forEach((element) => {
-//   element.addEventListener('click', (e) => {
-//     if (e.target.className == 'steps__word') {
-//       const stepsItem = e.target.nextElementSibling;
-//       if(stepsItem.classList.contains('steps__word--active')){
-//         stepsItem.classList.remove('steps__word--active');
-//         return;
-//       }
-//       const active = document.querySelectorAll('.steps__word--active');
-//       active.forEach((items) => {
-//         items.classList.remove('steps__word--active');
-//       });
-//       stepsItem.classList.add('steps__word--active');
-//     }
-//   });
-// });
+}
