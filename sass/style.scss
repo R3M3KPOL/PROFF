@@ -169,12 +169,6 @@
     display: flex;
 }
 
-// .wrapper {
-//     background: url("../img/jdproff_logo.png") center no-repeat;
-//     background-size: 30vmax;
-//     background-attachment: fixed;
-// }
-
 .main {
 
     &__bgfilter {
@@ -232,29 +226,41 @@
 
 }
 
-.class {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
+.Summer {
 
-.img-ulotka {
-    display: flex;
-    margin: auto;
-    width: 600px;
-}
 
-.tekst {
-    width: 1200px;
-    margin: auto;
-}
+    &__offert {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+    }
 
-.h1{
-    width: 500px;
-    margin: auto;
+    &__box-img {
+        margin: 0 auto;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 500px;
+        padding: 1.5em;
+    }
+
+    &__offert-text {
+        padding: 0.7em 1.5em;
+    }
+
+    &__offert-subtitle {
+        text-align: start;
+        margin:30px 0 20px 0;
+    }
+
+    &__text-first,
+    &__text-second,
+    &__text-third {
+        text-align: start;
+        padding: 1.5em 0;
+    }
 }
 
 .top {
@@ -276,6 +282,7 @@
 
     &__text-first,
     &__text-second {
+        text-align: start;
         padding: 1.5em;
     }
 }
@@ -923,6 +930,12 @@
     .previewBox {
         width: 350px;
     }
+
+    .Summer {
+        &__img {
+            width: 500px;
+        }
+    }
 }
 
 @media (min-width:1024px) {
@@ -950,4 +963,9 @@
         max-width: 600px;
     }
 
+    .Summer {
+        &__offert {
+            flex-direction: row;
+        }
+    }
 }
