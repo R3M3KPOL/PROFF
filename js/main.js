@@ -79,13 +79,13 @@ const faders = document.querySelectorAll('.fade-in')
 const appearOnScroll = new IntersectionObserver (function (Entries, appearOnScroll)
  {
 Entries.forEach(entry => {
-    console.log('scroll')
+    // console.log('scroll')
 if (! entry.isIntersecting){
     return;
 }else {
     entry.target.classList.add('appear')
     appearOnScroll.unobserve(entry.target);
-    console.log('good scroll')
+    // console.log('good scroll')
 }
 })
 }, appearOptions)
